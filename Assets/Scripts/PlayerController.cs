@@ -8,9 +8,12 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     public float speed = 5f;
     public float jumpingPower = 16f;
+    public GameObject interactiveText;
 
     //Variable for flipping the Player sprite
     private bool isFacingRight = true;
+
+    private bool canInteract = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -19,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
+        interactiveText.SetActive(false);
     }
 
     void Update()
@@ -43,6 +46,58 @@ public class PlayerController : MonoBehaviour
 
         // Flip the player sprite if moving in the opposite direction
         Flip();
+
+
+        {
+
+            if (Input.GetKeyDown(KeyCode.E) && canInteract)
+
+            {
+
+                 Interact(); 
+
+            }
+
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+
+        {
+
+            if (collision.CompareTag("Interactive"))
+
+            {
+                canInteract = true; interactiveText.SetActive(true);
+
+            }
+
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+
+        {
+
+            if (collision.CompareTag("Interactive"))
+
+            {
+
+                canInteract = false; interactiveText.SetActive(false);
+
+            }
+
+        }
+
+        public void Interact()
+
+        {
+
+            // put what u want to happen in here 
+            // display text
+            // interact after effects
+
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -73,6 +128,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
 
 }
 
