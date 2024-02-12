@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     public float speed = 5f;
     public float jumpingPower = 16f;
-    public GameObject interactiveText;
+    //  public GameObject interactiveText;
 
     //Variable for flipping the Player sprite
     private bool isFacingRight = true;
 
-    private bool canInteract = false;
+    //   private bool canInteract = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        interactiveText.SetActive(false);
+        //       interactiveText.SetActive(false);
     }
 
     void Update()
@@ -48,54 +48,54 @@ public class PlayerController : MonoBehaviour
         Flip();
 
 
-        {
+        //    {
 
-            if (Input.GetKeyDown(KeyCode.E) && canInteract)
+        //  if (Input.GetKeyDown(KeyCode.E) && canInteract)
 
-            {
+        //{
 
-                 Interact(); 
+        //          Interact(); 
 
-            }
+        //}
 
-        }
+        //}
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        //  private void OnTriggerEnter2D(Collider2D collision)
 
-        {
+        //  {
 
-            if (collision.CompareTag("Interactive"))
+        //if (collision.CompareTag("Interactive"))
 
-            {
-                canInteract = true; interactiveText.SetActive(true);
+        //{
+        //canInteract = true; interactiveText.SetActive(true);
 
-            }
+        //}
 
-        }
+        //}
 
-        private void OnTriggerExit2D(Collider2D collision)
+        //     private void OnTriggerExit2D(Collider2D collision)
 
-        {
+        //{
 
-            if (collision.CompareTag("Interactive"))
+        //if (collision.CompareTag("Interactive"))
 
-            {
+        //{
 
-                canInteract = false; interactiveText.SetActive(false);
+        //   canInteract = false; interactiveText.SetActive(false);
 
-            }
+        //  }
 
-        }
+        //   }
 
-        public void Interact()
+        //   public void Interact()
 
-        {
+        //    {
 
-            // put what u want to happen in here 
-            // display text
-            // interact after effects
+        // put what u want to happen in here 
+        // display text
+        // interact after effects
 
-        }
+        //   }
 
 
     }
