@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Left
   - Right
+  - Interactive
   layers:
   - Default
   - TransparentFX

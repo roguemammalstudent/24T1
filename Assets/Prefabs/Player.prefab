@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2120014290, guid: ec46cac872d8f1d489ff7b5e48dae012, type: 3}
-  m_Color: {r: 0, g: 0.9811321, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpingPower: 16
-  interactiveText: {fileID: 0}
   rb: {fileID: 4949922198711728032}
   groundCheck: {fileID: 0}
   groundLayer:
