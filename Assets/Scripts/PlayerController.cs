@@ -8,12 +8,13 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     public float speed = 5f;
     public float jumpingPower = 16f;
-    //  public GameObject interactiveText;
+    public GameObject interactiveText;
+    public GameObject interactedText;
 
     //Variable for flipping the Player sprite
     private bool isFacingRight = true;
 
-    //   private bool canInteract = false;
+    private bool canInteract = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -22,7 +23,9 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //       interactiveText.SetActive(false);
+        interactiveText.SetActive(false);
+
+        interactedText.SetActive(false);
     }
 
     void Update()
@@ -48,57 +51,59 @@ public class PlayerController : MonoBehaviour
         Flip();
 
 
-        //    {
+        if (Input.GetKeyDown(KeyCode.E) && canInteract)
 
-        //  if (Input.GetKeyDown(KeyCode.E) && canInteract)
+            {
 
-        //{
+                Interact();
 
-        //          Interact(); 
+            }
 
-        //}
-
-        //}
-
-        //  private void OnTriggerEnter2D(Collider2D collision)
-
-        //  {
-
-        //if (collision.CompareTag("Interactive"))
-
-        //{
-        //canInteract = true; interactiveText.SetActive(true);
-
-        //}
-
-        //}
-
-        //     private void OnTriggerExit2D(Collider2D collision)
-
-        //{
-
-        //if (collision.CompareTag("Interactive"))
-
-        //{
-
-        //   canInteract = false; interactiveText.SetActive(false);
-
-        //  }
-
-        //   }
-
-        //   public void Interact()
-
-        //    {
-
-        // put what u want to happen in here 
-        // display text
-        // interact after effects
-
-        //   }
-
+        
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+
+    {
+
+        if (collision.CompareTag("Interactive"))
+
+        {
+
+            canInteract = true; interactiveText.SetActive(true);
+
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+
+    {
+
+        if (collision.CompareTag("Interactive"))
+
+        {
+
+            canInteract = false; interactiveText.SetActive(false);
+            interactedText.SetActive(false);
+
+        }
+
+    }
+
+    public void Interact()
+
+    {
+
+        Debug.Log("Interacted!");
+        // put what u want to happen in here 
+        interactedText.SetActive(true);
+
+        // interact after effects(?)
+
+    }
+
 
     private void FixedUpdate()
     {
