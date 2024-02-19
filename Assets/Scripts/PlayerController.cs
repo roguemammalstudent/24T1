@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpingPower = 16f;
     public GameObject interactiveText;
     public GameObject interactedText;
+    public AudioSource AudioSource;
 
     //Variable for flipping the Player sprite
     private bool isFacingRight = true;
