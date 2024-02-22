@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2120014290, guid: ec46cac872d8f1d489ff7b5e48dae012, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,6 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpingPower: 16
+  interactiveText: {fileID: 0}
+  interactedText: {fileID: 0}
+  AudioSource: {fileID: 0}
   rb: {fileID: 4949922198711728032}
   groundCheck: {fileID: 0}
   groundLayer:
@@ -170,7 +173,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.25}
+    oldSize: {x: 1.5, y: 2.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
