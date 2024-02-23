@@ -5,7 +5,7 @@ using UnityEngine;
 public class GirlTalk : MonoBehaviour
 {
     public GameObject dialogueUI;
-    public GameObject promptUI;
+    public GameObject promptButton;
 
     public bool girlTalk;
 
@@ -61,12 +61,12 @@ public class GirlTalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && girlTalk)
-        {
-            DialogueText();
-            promptUI.SetActive(false);
-            //Time.timeScale = 0f;
-        }
+        //if (Input.GetKeyDown(KeyCode.E) && girlTalk)
+        //{
+        //    DialogueText();
+        //    promptButton.SetActive(false);
+        //    //Time.timeScale = 0f;
+        //}
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -74,7 +74,7 @@ public class GirlTalk : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             girlTalk = true;
-            promptUI.SetActive(true);
+            promptButton.SetActive(true);
         }
 
     }
@@ -84,8 +84,16 @@ public class GirlTalk : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             girlTalk = false;
-            promptUI.SetActive(false);
+            promptButton.SetActive(false);
         }
+    }
+
+    public void DialoguePrompt()
+    {
+        DialogueText();
+        promptButton.SetActive(false);
+
+
     }
 
     public void DialogueText()
@@ -310,7 +318,10 @@ public class GirlTalk : MonoBehaviour
         girlImage.SetActive(false);
         rangerImage.SetActive(false);
 
-        dialogueUI.SetActive(false);
+        dialogueUI.SetActive(true);
+
+        promptButton.SetActive(true);
+
     }
 
 }
