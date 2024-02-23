@@ -1022,9 +1022,39 @@ MonoBehaviour:
   dialogue1: {fileID: 624522467}
   dialogue2: {fileID: 763016933}
   dialogue3: {fileID: 484130662}
+  dialogue4: {fileID: 0}
+  dialogue5: {fileID: 0}
+  dialogue6: {fileID: 0}
+  dialogue7: {fileID: 0}
+  dialogue8: {fileID: 0}
+  dialogue9: {fileID: 0}
+  dialogue10: {fileID: 0}
+  dialogue11: {fileID: 0}
+  dialogue12: {fileID: 0}
+  dialogue13: {fileID: 0}
+  dialogue14: {fileID: 0}
+  dialogue15: {fileID: 0}
+  dialogue16: {fileID: 0}
+  dialogue17: {fileID: 0}
+  dialogueEnd: {fileID: 484130662}
   button1: {fileID: 957283420}
   button2: {fileID: 834669058}
   button3: {fileID: 601418503}
+  button4: {fileID: 0}
+  button5: {fileID: 0}
+  button6: {fileID: 0}
+  button7: {fileID: 0}
+  button8: {fileID: 0}
+  button9: {fileID: 0}
+  button10: {fileID: 0}
+  button11: {fileID: 0}
+  button12: {fileID: 0}
+  button13: {fileID: 0}
+  button14: {fileID: 0}
+  button15: {fileID: 0}
+  button16: {fileID: 0}
+  button17: {fileID: 0}
+  buttonEnd: {fileID: 601418503}
   girlImage: {fileID: 1456202922}
   rangerImage: {fileID: 788443662}
 --- !u!61 &1816529761
@@ -1348,6 +1378,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1816529760}
+    - target: {fileID: 7404812944179231409, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextEnd
+      objectReference: {fileID: 0}
     - target: {fileID: 8576126172332350924, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

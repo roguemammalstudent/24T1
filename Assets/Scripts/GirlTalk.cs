@@ -308,6 +308,9 @@ public class GirlTalk : MonoBehaviour
         buttonEnd.SetActive(false);
 
         girlImage.SetActive(false);
+        rangerImage.SetActive(false);
+
+        dialogueUI.SetActive(false);
     }
 
 }
