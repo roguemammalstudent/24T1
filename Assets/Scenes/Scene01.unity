@@ -163,7 +163,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "I\u2019m guessing you don\u2019t remember that neither. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &59455636
@@ -513,6 +513,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1503732, y: 2.3092613}
   m_EdgeRadius: 0
+--- !u!1 &242347242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4118398248465892489, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+  m_PrefabInstance: {fileID: 3875290811456232641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &242347243 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+  m_PrefabInstance: {fileID: 3875290811456232641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &312571549
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +563,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xAF\\_(\u30C4)_/\xAF"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -617,7 +627,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &312571551
@@ -697,7 +707,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '?'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -761,7 +771,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &345068544
@@ -1595,7 +1605,7 @@ MonoBehaviour:
   m_text: "You didn\u2019t know it was there!? Why, I\u2019d think the smell alone
     should give it away!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1659,7 +1669,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &522578751
@@ -1730,7 +1740,7 @@ MonoBehaviour:
   m_text: 'Er, best take a drink from that there well first before ye go. You look
     half-dead. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1794,7 +1804,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &562431934
@@ -2405,7 +2415,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xAF\\_(\u30C4)_/\xAF"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2469,7 +2479,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &707739572
@@ -2611,6 +2621,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u2026"
       objectReference: {fileID: 0}
+    - target: {fileID: 5770703461249958863, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
+    - target: {fileID: 5770703461249958863, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7404812944179231409, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2631,6 +2649,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Woah there, Ranger! You got a strange look in yer eye!
       objectReference: {fileID: 0}
+    - target: {fileID: 8529230253364741728, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
+    - target: {fileID: 8529230253364741728, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8576126172332350924, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2643,54 +2669,63 @@ PrefabInstance:
       propertyPath: m_text
       value: It got anything to do with that nasty gash on yer head?
       objectReference: {fileID: 0}
+    - target: {fileID: 8826479539260426240, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
+    - target: {fileID: 8826479539260426240, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9007267935723657813, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a81f0e959fc75a148a9cbcbd874aec71, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1419284297744232529, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 6
+      insertIndex: 5
       addedObject: {fileID: 1277461959}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 7
+      insertIndex: 6
       addedObject: {fileID: 522578752}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 8
+      insertIndex: 7
       addedObject: {fileID: 1475455474}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 9
+      insertIndex: 8
       addedObject: {fileID: 1787968751}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 10
+      insertIndex: 9
       addedObject: {fileID: 707739573}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 11
+      insertIndex: 10
       addedObject: {fileID: 884970619}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 12
+      insertIndex: 11
       addedObject: {fileID: 1856667290}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 13
+      insertIndex: 12
       addedObject: {fileID: 1999039347}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 14
+      insertIndex: 13
       addedObject: {fileID: 345068545}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 15
+      insertIndex: 14
       addedObject: {fileID: 59455637}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 16
+      insertIndex: 15
       addedObject: {fileID: 312571552}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 17
+      insertIndex: 16
       addedObject: {fileID: 2023980789}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 18
+      insertIndex: 17
       addedObject: {fileID: 1660862078}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-      insertIndex: 19
+      insertIndex: 18
       addedObject: {fileID: 562431935}
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
       insertIndex: -1
@@ -2734,6 +2769,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1577888882}
+    - targetCorrespondingSourceObject: {fileID: 5070953162793452465, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 242347243}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
 --- !u!1 &721859964
@@ -3044,7 +3082,7 @@ MonoBehaviour:
   m_text: "I\u2019ll be! You don\u2019t even remember me! Er, I\u2019m yer best friend!
     The Sheriff!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3108,7 +3146,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &884970618
@@ -3271,11 +3309,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885710105}
   m_CullTransparentMesh: 1
---- !u!1 &895490685 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1419284297744232529, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-  m_PrefabInstance: {fileID: 716976163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &911189969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4256,7 +4289,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4320,7 +4353,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1277461958
@@ -4581,7 +4614,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: :(
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4645,7 +4678,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1475455473
@@ -5393,7 +5426,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: :D
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5457,7 +5490,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1660862077
@@ -5788,8 +5821,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Thamp
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0ff597a93dd0acc4a968f6c1fdeacffd, type: 2}
+  m_sharedMaterial: {fileID: 3859861977878367045, guid: 0ff597a93dd0acc4a968f6c1fdeacffd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5904,7 +5937,7 @@ MonoBehaviour:
   m_text: "Hold on now\u2026if you don\u2019t remember the beating\u2026do you remember
     much else?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5968,7 +6001,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1787968750
@@ -6100,7 +6133,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: :)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6164,7 +6197,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1856667289
@@ -6600,7 +6633,7 @@ MonoBehaviour:
   m_text: "You called me out here \u2018cause you said you buried some treasure in
     the nearby town, Thamp. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6664,7 +6697,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1999039346
@@ -6735,7 +6768,7 @@ MonoBehaviour:
   m_text: "Say! Maybe if you retrace yer steps to the treasure, you may git yer mem\u2019ry
     back!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 262f71f35e17feb4dbcad84aa3e0d7f3, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6799,7 +6832,7 @@ MonoBehaviour:
   m_margin: {x: -55.18817, y: 0, z: -45.834267, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2023980788
@@ -7092,13 +7125,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3019091156854503966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50bd6e32c097e4f48a6e70a0f174e6f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 313943281}
-  promptUI: {fileID: 895490685}
+  promptButton: {fileID: 242347242}
   girlTalk: 1
   dialogue1: {fileID: 1560456892}
   dialogue2: {fileID: 1842273339}
@@ -7195,6 +7228,107 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a006752d074f1354fa4532b4cf18f940, type: 3}
+--- !u!1001 &3875290811456232641
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 313943285}
+    m_Modifications:
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 32.4542
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 222.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 633113039708788792, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 751596807550458640, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3019091156854503967}
+    - target: {fileID: 4118398248465892489, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
+      propertyPath: m_Name
+      value: PromptButton
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2617aa5d2136a224185f757a9e3fefd6, type: 3}
 --- !u!1001 &6280932756133890883
 PrefabInstance:
   m_ObjectHideFlags: 0
