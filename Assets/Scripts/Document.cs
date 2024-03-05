@@ -6,6 +6,9 @@ public class Document : MonoBehaviour
 {
     public GameObject mainCamera;
     public GameObject documentCamera;
+    public PlayerController playerController;
+    public string activateFunction;
+    public string deactivateFunction;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +26,13 @@ public class Document : MonoBehaviour
     {
         mainCamera.SetActive(false);
         documentCamera.SetActive(true);
+        playerController.Invoke(activateFunction, 0);
     }
 
     public void DeactivateDocument()
     {
         mainCamera.SetActive(true);
         documentCamera.SetActive(false);
+        playerController.Invoke(deactivateFunction, 0);
     }
 }
