@@ -6787,7 +6787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBoxUI: {fileID: 0}
-  dialogueUI: {fileID: 0}
+  dialogueUI: {fileID: 1601611410}
 --- !u!212 &1260412436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11669,6 +11669,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: interactedText
       value: 
       objectReference: {fileID: 598542685}
@@ -11676,6 +11680,10 @@ PrefabInstance:
       propertyPath: interactiveText
       value: 
       objectReference: {fileID: 2050137649}
+    - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6089111409922850177, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

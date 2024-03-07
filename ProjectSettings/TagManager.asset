@@ -6,13 +6,14 @@ TagManager:
   tags:
   - Left
   - Right
-  - Interactive
   - Death
+  - Interactive
+  - Eye
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - 
