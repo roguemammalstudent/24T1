@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public GameObject clinicCamera;
     public Transform clinicSpawnpoint;
 
-    public Parts partsUI;
+    public Inventory inventoryUI;
 
 
     private int eyeparts;
@@ -39,10 +38,6 @@ public class PlayerController : MonoBehaviour
         interactiveText.SetActive(false);
         if (interactedText!= null)
         interactedText.SetActive(false);
-
-        partsUI = FindObjectOfType<Parts>();
-
-
     }
 
 
@@ -91,39 +86,20 @@ public class PlayerController : MonoBehaviour
         }
 
         {
-
-
             if (collision.CompareTag("Eye"))
-
-
             {
-
-
                 Destroy(collision.gameObject);
                 eyeparts += 1; // Increment the parts by 1 
-                UpdatePartsUI(); // Update the parts UI display 
-
-
+                UpdateInventoryUI(); // Update the parts UI display 
             }
-
 
             if (collision.CompareTag("Core"))
-
-
             {
-
-
                 Destroy(collision.gameObject);
                 coreparts += 1;
-                UpdatePartsUI();
-
-
+                UpdateInventoryUI();
             }
-
-
         }
-
-
     }
 
     public void Interact()
@@ -166,35 +142,13 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-    public void UpdatePartsUI()
-
-
+    public void UpdateInventoryUI()
     {
-
-
-        Parts partsUI = FindObjectOfType<Parts>();
-
-
-        if (partsUI != null)
-
-
+        if (inventoryUI != null)
         {
-
-
-            partsUI.UpdateEyesDisplay(eyeparts);
-            partsUI.UpdateCoreDisplay(coreparts);
-
-
+            inventoryUI.UpdateEyesDisplay(eyeparts);
+            inventoryUI.UpdateCoreDisplay(coreparts);
         }
-
-
     }
-
-
-
-
-
-
 }
 
