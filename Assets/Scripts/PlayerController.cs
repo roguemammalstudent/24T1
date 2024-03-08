@@ -21,21 +21,33 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    public GameObject mainCamera;
+    public GameObject clinicCamera;
+    public Transform clinicSpawnpoint;
+
+    public Inventory inventoryUI;
+
+
+    private int eyeparts;
+    private int coreparts;
+
 
     void Start()
     {
+        if (interactiveText!= null)
         interactiveText.SetActive(false);
-
+        if (interactedText!= null)
         interactedText.SetActive(false);
     }
 
+
+
     void Update()
     {
-
         // Get Horizontal input from the Player
         horizontal = Input.GetAxisRaw("Horizontal");
-
-
+        // Move the Player horizontally based on input
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         // Player presses the jump button and is grounded = jump
         //  if (Input.GetButtonDown("Jump") && IsGrounded())
         //  {
@@ -51,79 +63,64 @@ public class PlayerController : MonoBehaviour
         // Flip the player sprite if moving in the opposite direction
         Flip();
 
-
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
-
-            {
-
-                Interact();
-
-            }
-
-        
-
+        {
+            Interact();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-
     {
-
         if (collision.CompareTag("Interactive"))
-
         {
-
             canInteract = true; interactiveText.SetActive(true);
-
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
-
     {
-
         if (collision.CompareTag("Interactive"))
-
         {
-
             canInteract = false; interactiveText.SetActive(false);
             interactedText.SetActive(false);
-
         }
 
+        {
+            if (collision.CompareTag("Eye"))
+            {
+                Destroy(collision.gameObject);
+                eyeparts += 1; // Increment the parts by 1 
+                UpdateInventoryUI(); // Update the parts UI display 
+            }
+
+            if (collision.CompareTag("Core"))
+            {
+                Destroy(collision.gameObject);
+                coreparts += 1;
+                UpdateInventoryUI();
+            }
+        }
     }
 
     public void Interact()
-
     {
-
         Debug.Log("Interacted!");
         // put what u want to happen in here 
         interactedText.SetActive(true);
 
         // interact after effects(?)
-
     }
 
-
-    private void FixedUpdate()
-    {
-        // Move the Player horizontally based on input
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-    }
-
-    // Check if the player is on the ground
-    //  private bool isGrounded
-    //  {
-    // Use a Circle Cast to detect if there is ground beneath the Player
+    //// Check if the player is on the ground
+    //private bool isGrounded()
+    //{
+    //   // Use a Circle Cast to detect if there is ground beneath the Player
     //   return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-
-
+    //}
 
     // Flip the player sprite if moving in the opposite direction
     private void Flip()
     {
-
         // If moving right but facing left, or moving left but facing right = flip the sprite
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
@@ -132,9 +129,26 @@ public class PlayerController : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
 
+    public void MoveToClinic()
+    {
+        transform.position = clinicSpawnpoint.position;
+    }
+
+    public void MoveToHell()
+    {
+        transform.position = new Vector3(0,0,0);
     }
 
 
+    public void UpdateInventoryUI()
+    {
+        if (inventoryUI != null)
+        {
+            inventoryUI.UpdateEyesDisplay(eyeparts);
+            inventoryUI.UpdateCoreDisplay(coreparts);
+        }
+    }
 }
 
