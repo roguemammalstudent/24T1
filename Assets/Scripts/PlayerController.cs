@@ -25,6 +25,13 @@ public class PlayerController : MonoBehaviour
     public GameObject clinicCamera;
     public Transform clinicSpawnpoint;
 
+    public Inventory inventoryUI;
+
+
+    private int eyeparts;
+    private int coreparts;
+
+
     void Start()
     {
         if (interactiveText!= null)
@@ -32,6 +39,8 @@ public class PlayerController : MonoBehaviour
         if (interactedText!= null)
         interactedText.SetActive(false);
     }
+
+
 
     void Update()
     {
@@ -75,6 +84,22 @@ public class PlayerController : MonoBehaviour
             canInteract = false; interactiveText.SetActive(false);
             interactedText.SetActive(false);
         }
+
+        {
+            if (collision.CompareTag("Eye"))
+            {
+                Destroy(collision.gameObject);
+                eyeparts += 1; // Increment the parts by 1 
+                UpdateInventoryUI(); // Update the parts UI display 
+            }
+
+            if (collision.CompareTag("Core"))
+            {
+                Destroy(collision.gameObject);
+                coreparts += 1;
+                UpdateInventoryUI();
+            }
+        }
     }
 
     public void Interact()
@@ -116,5 +141,14 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(0,0,0);
     }
 
+
+    public void UpdateInventoryUI()
+    {
+        if (inventoryUI != null)
+        {
+            inventoryUI.UpdateEyesDisplay(eyeparts);
+            inventoryUI.UpdateCoreDisplay(coreparts);
+        }
+    }
 }
 
