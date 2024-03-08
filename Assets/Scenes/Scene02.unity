@@ -992,6 +992,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1229253330}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: inventoryUI
+      value: 
+      objectReference: {fileID: 856042899}
+    - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: clinicCamera
       value: 
       objectReference: {fileID: 2043979137}
@@ -1851,6 +1855,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856042899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2700087330789092545, guid: 5933cb7534edc954da3885547157c4ba, type: 3}
+  m_PrefabInstance: {fileID: 308286024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9517bc192e210a14880633bd87d9c459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884371841
 GameObject:
   m_ObjectHideFlags: 0

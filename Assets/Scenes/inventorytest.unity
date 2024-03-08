@@ -11899,6 +11899,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 362586401}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: inventoryUI
+      value: 
+      objectReference: {fileID: 362586401}
+    - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: interactedText
       value: 
       objectReference: {fileID: 598542685}

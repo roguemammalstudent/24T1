@@ -9,6 +9,7 @@ TagManager:
   - Death
   - Interactive
   - Eye
+  - Core
   layers:
   - Default
   - TransparentFX
