@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 679319372}
   - component: {fileID: 679319371}
   m_Layer: 0
-  m_Name: SwampWitch
+  m_Name: Susie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
