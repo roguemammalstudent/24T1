@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
 
     public GameObject mainCamera;
     public GameObject clinicCamera;
-    public Transform clinicSpawnpoint;
 
     public Inventory inventoryUI;
 
@@ -131,14 +130,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void MoveToClinic()
+    public void MoveToClinicInt()
     {
-        transform.position = clinicSpawnpoint.position;
+        transform.position = new Vector3(130, 34, 0);
     }
 
-    public void MoveToHell()
+    public void MoveToClinicExt()
     {
-        transform.position = new Vector3(0,0,0);
+        transform.position = new Vector3(130,-1,0);
+    }
+
+    public void MoveToSaloonInt()
+    {
+        transform.position = new Vector3(80, 53, 0);
+    }
+
+    public void MoveToSaloonExt()
+    {
+        transform.position = new Vector3(108, -1, 0);
     }
 
 
