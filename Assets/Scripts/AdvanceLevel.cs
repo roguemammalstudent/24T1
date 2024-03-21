@@ -52,6 +52,6 @@ public class AdvanceLevel : MonoBehaviour
     public void AdvanceDeathLevel()
     {
 
-        SceneManager.LoadScene("DeathScene");
+        SceneManager.LoadScene("ClassicDeathScene");
     }
 }
