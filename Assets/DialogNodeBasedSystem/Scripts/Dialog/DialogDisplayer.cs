@@ -11,6 +11,9 @@ namespace cherrydev
         [SerializeField] private SentencePanel dialogSentensePanel;
         [SerializeField] private AnswerPanel dialogAnswerPanel;
 
+        public GameObject button;
+        public GameObject dialogueToDeactivate;
+
         private void OnEnable()
         {
             dialogBehaviour.AddListenerToDialogFinishedEvent(DisableDialogPanel);
@@ -53,6 +56,9 @@ namespace cherrydev
             dialogBehaviour.OnMaxAmountOfAnswerButtonsCalculated -= dialogAnswerPanel.SetUpButtons;
 
             dialogBehaviour.OnAnswerNodeSetUp -= SetUpAnswerDialogPanel;
+
+            //button.SetActive(true);
+            //dialogueToDeactivate.SetActive(false);
         }
 
         /// <summary>
@@ -78,6 +84,8 @@ namespace cherrydev
         /// </summary>
         public void DisableDialogAnswerPanel()
         {
+            button.SetActive(true);
+            dialogueToDeactivate.SetActive(false);
             ActiveGameObject(dialogAnswerPanel.gameObject, false);
         }
 
