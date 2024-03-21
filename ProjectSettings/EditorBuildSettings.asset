@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene01.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene02.unity
     guid: e51528d55ad99c043b57ed3c10d37edc
   - enabled: 0
@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene04.unity
     guid: 600ecfdf033567e46a074788a5e2552b
   - enabled: 1
-    path: Assets/Scenes/DeathScene.unity
+    path: Assets/Scenes/DeathScenes/ClinicDeathScene.unity
+    guid: ef4bf1b1626b7af46be3e906aba87ce4
+  - enabled: 1
+    path: Assets/Scenes/DeathScenes/ClassicDeathScene.unity
     guid: 4525fc272ef5b6e4b8c4a9ab9ea86f03
   m_configObjects: {}
