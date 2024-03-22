@@ -34,11 +34,5 @@ public class Document : MonoBehaviour
         mainCamera.SetActive(true);
         documentCamera.SetActive(false);
         playerController.Invoke(deactivateFunction, 0);
-        Invoke(nameof(DeactivateDocumentCameraWorkaroundTwT), 0.1f);
-    }
-
-    private void DeactivateDocumentCameraWorkaroundTwT()
-    {
-        documentCamera.SetActive(false);
     }
 }
