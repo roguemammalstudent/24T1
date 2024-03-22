@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject mainCamera;
     public GameObject clinicCamera;
+    public GameObject saloonCamera;
 
     public Inventory inventoryUI;
 
@@ -138,6 +139,8 @@ public class PlayerController : MonoBehaviour
     public void MoveToClinicExt()
     {
         transform.position = new Vector3(130,-1,0);
+        saloonCamera.SetActive(false);
+        Debug.Log("Exit clinic");
     }
 
     public void MoveToSaloonInt()
@@ -148,6 +151,7 @@ public class PlayerController : MonoBehaviour
     public void MoveToSaloonExt()
     {
         transform.position = new Vector3(108, -1, 0);
+        Debug.Log("Exit outside saloon");
     }
 
 
