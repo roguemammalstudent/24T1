@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxItems: 10
   items:
-  - itemType: {fileID: 0}
+  - itemType: {fileID: 11400000, guid: 0c68289ace910514ca6f7ac8db23b5f6, type: 2}
     newItemType: {fileID: 0}
     items: []
   - itemType: {fileID: 0}
