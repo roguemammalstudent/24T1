@@ -27,9 +27,10 @@ public class PlayerController : MonoBehaviour
 
     public Inventory inventoryUI;
 
-
-    private int eyeparts;
-    private int coreparts;
+    [Header("Inventory Stuff")]
+    [SerializeField] private int eyeparts;
+    [SerializeField] private int coreparts;
+    public bool hasCollectedTheHat = false;
 
 
     void Start()
@@ -74,6 +75,13 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Interactive"))
         {
             canInteract = true; interactiveText.SetActive(true);
+
+            // AG: Wherever you want to check if the player has collect a specific item or not...
+            //     ...use an if statement to check if that boolean is TRUE or FALSE.
+            if(hasCollectedTheHat == true)
+            {
+                Debug.Log("YOu have collected the hat!@");
+            }
         }
     }
 
