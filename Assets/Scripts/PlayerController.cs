@@ -30,7 +30,19 @@ public class PlayerController : MonoBehaviour
     [Header("Inventory Stuff")]
     [SerializeField] private int eyeparts;
     [SerializeField] private int coreparts;
-    public bool hasCollectedTheHat = false;
+    public bool hasCollectedTheAirhorn = false;
+    public bool hasCollectedTheBloodyBat = false;
+    public bool hasCollectedTheBoots = false;
+    public bool hasCollectedTheBoozeBottle = false;
+    public bool hasCollectedTheCactus = false;
+    public bool hasCollectedTheCat = false;
+    public bool hasCollectedTheFroggyHat = false;
+    public bool hasCollectedTheJacket = false;
+    public bool hasCollectedTheJJBullet = false;
+    public bool hasCollectedTheJeans = false;
+    public bool hasCollectedThePatientHat = false;
+    public bool hasCollectedTheShinyBadge = false;
+    public bool hasCollectedTheTreasureMap = false;
 
 
     void Start()
@@ -78,9 +90,9 @@ public class PlayerController : MonoBehaviour
 
             // AG: Wherever you want to check if the player has collect a specific item or not...
             //     ...use an if statement to check if that boolean is TRUE or FALSE.
-            if(hasCollectedTheHat == true)
+            if(hasCollectedTheFroggyHat == true)
             {
-                Debug.Log("YOu have collected the hat!@");
+                Debug.Log("You have collected the froggy hat!");
             }
         }
     }
