@@ -120,6 +120,16 @@ public class PlayerController : MonoBehaviour
                 UpdateInventoryUI();
             }
         }
+
+        if (collision.CompareTag("FroggyHat"))
+        {
+            hasCollectedTheFroggyHat = true;
+        }
+
+        if (collision.CompareTag("BoozeBottle"))
+        {
+            hasCollectedTheBoozeBottle = true;
+        }
     }
 
     public void Interact()

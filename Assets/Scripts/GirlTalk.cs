@@ -95,17 +95,17 @@ public class GirlTalk : MonoBehaviour
     {
         DialogueText();
         promptButton.SetActive(false);
-        if (playerController.hasCollectedTheFroggyHat == true)
+        //if (playerController.hasCollectedTheFroggyHat == true)
 
-        {
-            // Go to the text that acknowledges this
+        //{
+        //    // Go to the text that acknowledges this
 
-        }
+        //}
 
-        else
-        {
-            // Go to the text that does NOT acknowledge this
-        }
+        //else
+        //{
+        //    // Go to the text that does NOT acknowledge this
+        //}
     }
 
     public void DialogueText()
