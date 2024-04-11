@@ -12,6 +12,8 @@ TagManager:
   - Core
   - FroggyHat
   - BoozeBottle
+  - BlueFlower
+  - JJBullet
   layers:
   - Default
   - TransparentFX

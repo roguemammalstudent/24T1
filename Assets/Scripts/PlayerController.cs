@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public GameObject mainCamera;
     public GameObject clinicCamera;
     public GameObject saloonCamera;
+    public GameObject cemeteryCamera;
 
     public Inventory inventoryUI;
 
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int coreparts;
     public bool hasCollectedTheAirhorn = false;
     public bool hasCollectedTheBloodyBat = false;
+    public bool hasCollectedTheBlueFlower = false;
     public bool hasCollectedTheBoots = false;
     public bool hasCollectedTheBoozeBottle = false;
     public bool hasCollectedTheCactus = false;
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public bool hasCollectedTheJacket = false;
     public bool hasCollectedTheJJBullet = false;
     public bool hasCollectedTheJeans = false;
+    public bool hasCollectedTheJeansQuest = false;
     public bool hasCollectedThePatientHat = false;
     public bool hasCollectedTheShinyBadge = false;
     public bool hasCollectedTheTreasureMap = false;
@@ -130,6 +133,12 @@ public class PlayerController : MonoBehaviour
         {
             hasCollectedTheBoozeBottle = true;
         }
+
+        if (collision.CompareTag("BlueFlower"))
+        {
+            hasCollectedTheBoozeBottle = true;
+        }
+
     }
 
     public void Interact()
@@ -182,6 +191,18 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = new Vector3(108, -1, 0);
         Debug.Log("Exit outside saloon");
+    }
+
+    public void MoveToCemeteryInt()
+    {
+        transform.position = new Vector3(140, 66, 0);
+    }
+
+    public void MoveToCemeteryExt()
+    {
+        transform.position = new Vector3(180, -1, 0);
+        saloonCamera.SetActive(false);
+        Debug.Log("Exit clinic");
     }
 
 
