@@ -29045,10 +29045,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2050137649}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
-      propertyPath: clinicSpawnpoint
-      value: 
-      objectReference: {fileID: 1278067969}
-    - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 0
       objectReference: {fileID: 0}
