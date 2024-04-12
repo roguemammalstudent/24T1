@@ -10,6 +10,11 @@ TagManager:
   - Interactive
   - Eye
   - Core
+  - FroggyHat
+  - BoozeBottle
+  - BlueFlower
+  - JJBullet
+  - Quiet
   layers:
   - Default
   - TransparentFX

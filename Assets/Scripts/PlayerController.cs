@@ -23,12 +23,30 @@ public class PlayerController : MonoBehaviour
 
     public GameObject mainCamera;
     public GameObject clinicCamera;
+    public GameObject saloonCamera;
+    public GameObject cemeteryCamera;
 
     public Inventory inventoryUI;
 
-
-    private int eyeparts;
-    private int coreparts;
+    [Header("Inventory Stuff")]
+    [SerializeField] private int eyeparts;
+    [SerializeField] private int coreparts;
+    public bool hasCollectedTheAirhorn = false;
+    public bool hasCollectedTheBloodyBat = false;
+    public bool hasCollectedTheBlueFlower = false;
+    public bool hasCollectedTheBoots = false;
+    public bool hasCollectedTheBoozeBottle = false;
+    public bool hasCollectedTheCactus = false;
+    public bool hasCollectedTheCat = false;
+    public bool hasCollectedTheFroggyHat = false;
+    public bool hasCollectedTheJacket = false;
+    public bool hasCollectedTheJJBullet = false;
+    public bool hasCollectedTheJeans = false;
+    public bool hasCollectedTheJeansQuest = false;
+    public bool hasCollectedThePatientHat = false;
+    public bool hasCollectedTheQuiet = false;
+    public bool hasCollectedTheShinyBadge = false;
+    public bool hasCollectedTheTreasureMap = false;
 
 
     void Start()
@@ -73,6 +91,13 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Interactive"))
         {
             canInteract = true; interactiveText.SetActive(true);
+
+            // AG: Wherever you want to check if the player has collect a specific item or not...
+            //     ...use an if statement to check if that boolean is TRUE or FALSE.
+            if(hasCollectedTheFroggyHat == true)
+            {
+                Debug.Log("You have collected the froggy hat!");
+            }
         }
     }
 
@@ -99,6 +124,27 @@ public class PlayerController : MonoBehaviour
                 UpdateInventoryUI();
             }
         }
+
+        if (collision.CompareTag("FroggyHat"))
+        {
+            hasCollectedTheFroggyHat = true;
+        }
+
+        if (collision.CompareTag("BoozeBottle"))
+        {
+            hasCollectedTheBoozeBottle = true;
+        }
+
+        if (collision.CompareTag("BlueFlower"))
+        {
+            hasCollectedTheBoozeBottle = true;
+        }
+
+        if (collision.CompareTag("Quiet"))
+        {
+            hasCollectedTheBoozeBottle = true;
+        }
+
     }
 
     public void Interact()
@@ -138,6 +184,8 @@ public class PlayerController : MonoBehaviour
     public void MoveToClinicExt()
     {
         transform.position = new Vector3(130,-1,0);
+        saloonCamera.SetActive(false);
+        Debug.Log("Exit clinic");
     }
 
     public void MoveToSaloonInt()
@@ -148,6 +196,19 @@ public class PlayerController : MonoBehaviour
     public void MoveToSaloonExt()
     {
         transform.position = new Vector3(108, -1, 0);
+        Debug.Log("Exit outside saloon");
+    }
+
+    public void MoveToCemeteryInt()
+    {
+        transform.position = new Vector3(140, 66, 0);
+    }
+
+    public void MoveToCemeteryExt()
+    {
+        transform.position = new Vector3(180, -1, 0);
+        saloonCamera.SetActive(false);
+        Debug.Log("Exit clinic");
     }
 
 

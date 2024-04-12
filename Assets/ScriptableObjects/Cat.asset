@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcdbf90e2d633b6428a445d97abc42a0, type: 3}
-  m_Name: ShinyBadge
+  m_Name: Cat
   m_EditorClassIdentifier: 
-  itemName: Shiny Badge
-  icon: {fileID: 1875824468, guid: ec46cac872d8f1d489ff7b5e48dae012, type: 3}
-  description: A shiny badge.
-  startingAmmo: 0
-  startingCondition: 0
+  itemName: Cat
+  icon: {fileID: 21300000, guid: 092736ec8cb897a49a7c1cc1acb21d24, type: 3}
+  description: Not friendly :(
+  model: {fileID: 1897673062189519373, guid: 89d1ba164e582d146bad3f26f712fe73, type: 3}

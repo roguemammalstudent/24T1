@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GirlTalk : MonoBehaviour
 {
+
+    public PlayerController playerController;
+
     public GameObject dialogueUI;
     public GameObject promptButton;
 
@@ -92,8 +95,17 @@ public class GirlTalk : MonoBehaviour
     {
         DialogueText();
         promptButton.SetActive(false);
+        //if (playerController.hasCollectedTheFroggyHat == true)
 
+        //{
+        //    // Go to the text that acknowledges this
 
+        //}
+
+        //else
+        //{
+        //    // Go to the text that does NOT acknowledge this
+        //}
     }
 
     public void DialogueText()

@@ -8,7 +8,9 @@ public class ItemData : ScriptableObject
     [TextArea]
     public string description;
 
-    public int startingAmmo;
-    public int startingCondition;
+    public GameObject model;
+
+    //public int startingAmmo;
+    //public int startingCondition;
 
 }
