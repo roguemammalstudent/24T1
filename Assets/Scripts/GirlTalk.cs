@@ -314,6 +314,7 @@ public class GirlTalk : MonoBehaviour
         dialogue16.SetActive(false);
         dialogueEnd.SetActive(true);
 
+        button15.SetActive(false);
         button16.SetActive(false);
         buttonEnd.SetActive(true);
 

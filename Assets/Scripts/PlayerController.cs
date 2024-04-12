@@ -176,40 +176,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void MoveToClinicInt()
-    {
-        transform.position = new Vector3(130, 34, 0);
-    }
+    //public void MoveToClinicInt()
+    //{
+    //    transform.position = new Vector3(130, 34, 0);
+    //}
 
-    public void MoveToClinicExt()
-    {
-        transform.position = new Vector3(130,-1,0);
-        saloonCamera.SetActive(false);
-        Debug.Log("Exit clinic");
-    }
+    //public void MoveToClinicExt()
+    //{
+    //    transform.position = new Vector3(130, -1, 0);
+    //    saloonCamera.SetActive(false);
+    //    Debug.Log("Exit clinic");
+    //}
 
-    public void MoveToSaloonInt()
-    {
-        transform.position = new Vector3(80, 53, 0);
-    }
+    //public void MoveToSaloonInt()
+    //{
+    //    transform.position = new Vector3(80, 53, 0);
+    //}
 
-    public void MoveToSaloonExt()
-    {
-        transform.position = new Vector3(108, -1, 0);
-        Debug.Log("Exit outside saloon");
-    }
+    //public void MoveToSaloonExt()
+    //{
+    //    transform.position = new Vector3(108, -1, 0);
+    //    Debug.Log("Exit outside saloon");
+    //}
 
-    public void MoveToCemeteryInt()
-    {
-        transform.position = new Vector3(140, 66, 0);
-    }
+    //public void MoveToCemeteryInt()
+    //{
+    //    transform.position = new Vector3(140, 66, 0);
+    //}
 
-    public void MoveToCemeteryExt()
-    {
-        transform.position = new Vector3(180, -1, 0);
-        saloonCamera.SetActive(false);
-        Debug.Log("Exit clinic");
-    }
+    //public void MoveToCemeteryExt()
+    //{
+    //    transform.position = new Vector3(180, -1, 0);
+    //    saloonCamera.SetActive(false);
+    //    Debug.Log("Exit clinic");
+    //}
 
 
     public void UpdateInventoryUI()
