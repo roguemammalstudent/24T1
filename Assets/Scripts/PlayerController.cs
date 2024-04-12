@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     public bool hasCollectedTheJeans = false;
     public bool hasCollectedTheJeansQuest = false;
     public bool hasCollectedThePatientHat = false;
+    public bool hasCollectedTheQuiet = false;
     public bool hasCollectedTheShinyBadge = false;
     public bool hasCollectedTheTreasureMap = false;
 
@@ -135,6 +136,11 @@ public class PlayerController : MonoBehaviour
         }
 
         if (collision.CompareTag("BlueFlower"))
+        {
+            hasCollectedTheBoozeBottle = true;
+        }
+
+        if (collision.CompareTag("Quiet"))
         {
             hasCollectedTheBoozeBottle = true;
         }
