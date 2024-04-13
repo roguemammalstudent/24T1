@@ -37,12 +37,12 @@ public class PlayerController : MonoBehaviour
     public bool hasCollectedTheBoots = false;
     public bool hasCollectedTheBoozeBottle = false;
     public bool hasCollectedTheCactus = false;
-    public bool hasCollectedTheCat = false;
     public bool hasCollectedTheFroggyHat = false;
     public bool hasCollectedTheJacket = false;
     public bool hasCollectedTheJJBullet = false;
     public bool hasCollectedTheJeans = false;
     public bool hasCollectedTheJeansQuest = false;
+    public bool hasCollectedTheMabel = false;
     public bool hasCollectedThePatientHat = false;
     public bool hasCollectedTheQuiet = false;
     public bool hasCollectedTheShinyBadge = false;

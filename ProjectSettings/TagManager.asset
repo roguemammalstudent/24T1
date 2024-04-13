@@ -8,13 +8,9 @@ TagManager:
   - Right
   - Death
   - Interactive
-  - Eye
-  - Core
-  - FroggyHat
-  - BoozeBottle
-  - BlueFlower
-  - JJBullet
-  - Quiet
+  - Cat
+  - Airhorn
+  - BloodyBat
   layers:
   - Default
   - TransparentFX
