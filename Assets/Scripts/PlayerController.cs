@@ -32,21 +32,51 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int eyeparts;
     [SerializeField] private int coreparts;
     public bool hasCollectedTheAirhorn = false;
+    public bool hasCollectedTheBadgeQuest = false;
+    public bool hasCollectedTheBird = false;
     public bool hasCollectedTheBloodyBat = false;
     public bool hasCollectedTheBlueFlower = false;
-    public bool hasCollectedTheBoots = false;
+    public bool hasCollectedTheBootsQuest = false;
     public bool hasCollectedTheBoozeBottle = false;
+    public bool hasCollectedTheBoozeQuest = false;
     public bool hasCollectedTheCactus = false;
+    public bool hasCollectedTheChair = false;
+    public bool hasCollectedTheDress = false;
+    public bool hasCollectedTheExperimentVial = false;
     public bool hasCollectedTheFroggyHat = false;
-    public bool hasCollectedTheJacket = false;
+    public bool hasCollectedTheGratitude = false;
+    public bool hasCollectedTheHappy = false;
+    public bool hasCollectedTheHatQuest = false;
     public bool hasCollectedTheJJBullet = false;
-    public bool hasCollectedTheJeans = false;
+    public bool hasCollectedTheJacket = false;
     public bool hasCollectedTheJeansQuest = false;
+    public bool hasCollectedTheJustice = false;
+    public bool hasCollectedTheKey = false;
+    public bool hasCollectedTheKnife = false;
+    public bool hasCollectedTheLavaRock = false;
     public bool hasCollectedTheMabel = false;
+    public bool hasCollectedTheMemoriam = false;
+    public bool hasCollectedTheMemory = false;
+    public bool hasCollectedTheMission = false;
+    public bool hasCollectedTheNote = false;
+    public bool hasCollectedThePatientBoots = false;
     public bool hasCollectedThePatientHat = false;
+    public bool hasCollectedThePatientJacket = false;
+    public bool hasCollectedThePatientJeans = false;
+    public bool hasCollectedThePeteyPlan = false;
+    public bool hasCollectedThePillow = false;
+    public bool hasCollectedThePotion = false;
+    public bool hasCollectedThePotionQuest = false;
     public bool hasCollectedTheQuiet = false;
-    public bool hasCollectedTheShinyBadge = false;
+    public bool hasCollectedTheQuietQuest = false;
+    public bool hasCollectedTheSheriffBadge = false;
+    public bool hasCollectedTheSunflowerSeeds = false;
+    public bool hasCollectedTheTruth = false;
+    public bool hasCollectedTheTreasure = false;
     public bool hasCollectedTheTreasureMap = false;
+    public bool hasCollectedTheWife = false;
+    public bool hasCollectedTheWifeDeployed = false;
+    public bool hasCollectedTheWig = false;
 
 
     void Start()
@@ -137,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("BlueFlower"))
         {
-            hasCollectedTheBoozeBottle = true;
+            hasCollectedTheBlueFlower = true;
         }
 
         if (collision.CompareTag("Quiet"))
