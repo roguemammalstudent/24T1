@@ -7,11 +7,14 @@ public class PossessionCheck : MonoBehaviour
     public PlayerController playerController;
     public GameObject haveObjectDialogue;
     public GameObject normalDialogue;
-    public GameObject promptButton;
+
+    // Initial dialogue WITHOUT desired object
+    public GameObject firstButton;
     public GameObject firstImage;
     public GameObject firstLine;
 
-    public GameObject objectButton;
+    // Having the desired object
+    public GameObject firstObjectButton;
     public GameObject firstObjectImage;
     public GameObject firstObjectLine;
 
@@ -34,7 +37,7 @@ public class PossessionCheck : MonoBehaviour
         {
             // Go to the text that acknowledges this
             haveObjectDialogue.SetActive(true);
-            objectButton.SetActive(true);
+            firstObjectButton.SetActive(true);
             firstObjectImage.SetActive(true);
             firstObjectImage.SetActive(true);
             firstObjectLine.SetActive(true);
@@ -44,7 +47,7 @@ public class PossessionCheck : MonoBehaviour
         {
             // Go to the text that does NOT acknowledge this
             normalDialogue.SetActive(true);
-            promptButton.SetActive(true);
+            firstButton.SetActive(true);
             firstImage.SetActive(true);
             firstImage.SetActive(true);
             firstLine.SetActive(true);
@@ -58,7 +61,7 @@ public class PossessionCheck : MonoBehaviour
         {
             // Go to the text that acknowledges this
             haveObjectDialogue.SetActive(true);
-            objectButton.SetActive(true);
+            firstObjectButton.SetActive(true);
             firstObjectImage.SetActive(true);
             firstObjectImage.SetActive(true);
             firstObjectLine.SetActive(true);
@@ -68,7 +71,7 @@ public class PossessionCheck : MonoBehaviour
         {
             // Go to the text that does NOT acknowledge this
             normalDialogue.SetActive(true);
-            promptButton.SetActive(true);
+            firstButton.SetActive(true);
             firstImage.SetActive(true);
             firstImage.SetActive(true);
             firstLine.SetActive(true);
