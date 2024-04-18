@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,21 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
     public float speed = 5f;
     public float jumpingPower = 16f;
-    public GameObject interactiveText;
-    public GameObject interactedText;
+
+    // Interactive texts
+    public GameObject wellInteractiveText;
+    public GameObject wellInteractedText;
+    public GameObject bushInteractiveText;
+    public GameObject bushInteractedText;
+
     public AudioSource AudioSource;
+    public SoundManager soundManager;
 
     //Variable for flipping the Player sprite
     private bool isFacingRight = true;
 
-    private bool canInteract = false;
+    private bool canWellInteract = false;
+    private bool canBushInteract = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -81,10 +89,15 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if (interactiveText!= null)
-        interactiveText.SetActive(false);
-        if (interactedText!= null)
-        interactedText.SetActive(false);
+        if (wellInteractiveText!= null)
+        wellInteractiveText.SetActive(false);
+        if (wellInteractedText!= null)
+        wellInteractedText.SetActive(false);
+
+        if (bushInteractiveText != null)
+            bushInteractiveText.SetActive(false);
+        if (bushInteractedText != null)
+            bushInteractedText.SetActive(false);
     }
 
 
@@ -110,33 +123,58 @@ public class PlayerController : MonoBehaviour
         // Flip the player sprite if moving in the opposite direction
         Flip();
 
-        if (Input.GetKeyDown(KeyCode.E) && canInteract)
+        if (Input.GetKeyDown(KeyCode.E) && canWellInteract)
         {
-            Interact();
+            WellInteract();
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && canBushInteract)
+        {
+            BushInteract();
+        }
+
+        if (hasCollectedTheAirhorn == true);
+
+        {
+            AirhornFun();
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactive"))
         {
-            canInteract = true; interactiveText.SetActive(true);
+            canWellInteract = true; wellInteractiveText.SetActive(true);
 
             // AG: Wherever you want to check if the player has collect a specific item or not...
             //     ...use an if statement to check if that boolean is TRUE or FALSE.
-            if(hasCollectedTheFroggyHat == true)
+            if (hasCollectedTheFroggyHat == true)
             {
                 Debug.Log("You have collected the froggy hat!");
             }
         }
+
+        if (collision.CompareTag("Bush"))
+        {
+            canBushInteract = true; bushInteractiveText.SetActive(true);
+
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Interactive"))
         {
-            canInteract = false; interactiveText.SetActive(false);
-            interactedText.SetActive(false);
+            canWellInteract = false; wellInteractiveText.SetActive(false);
+            wellInteractedText.SetActive(false);
+        }
+
+        if (collision.CompareTag("Bush"))
+        {
+            canBushInteract = false; bushInteractiveText.SetActive(false);
+            bushInteractedText.SetActive(false);
         }
 
         {
@@ -175,16 +213,45 @@ public class PlayerController : MonoBehaviour
             hasCollectedTheBoozeBottle = true;
         }
 
+        if (collision.CompareTag("Jeans"))
+        {
+            hasCollectedThePatientJeans = true;
+        }
+
     }
 
-    public void Interact()
+    public void ActivateFunctionByName(string functionName)
+    {
+        Invoke(functionName ,0);
+    }
+
+    public void WellInteract()
     {
         Debug.Log("Interacted!");
         // put what u want to happen in here 
-        interactedText.SetActive(true);
+        wellInteractedText.SetActive(true);
 
         // interact after effects(?)
     }
+
+    public void BushInteract()
+    {
+        Debug.Log("Airhorn get!");
+        // put what u want to happen in here 
+        bushInteractedText.SetActive(true);
+
+        // interact after effects(?)
+        hasCollectedTheAirhorn = true;
+    }
+
+    public void AirhornFun()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && hasCollectedTheAirhorn)
+        {
+            soundManager.AirhornSound();
+        }
+    }
+
 
     //// Check if the player is on the ground
     //private bool isGrounded()

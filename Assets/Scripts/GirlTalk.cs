@@ -10,6 +10,8 @@ public class GirlTalk : MonoBehaviour
     public GameObject dialogueUI;
     public GameObject promptButton;
 
+    public string activateFun;
+
     public bool girlTalk;
 
     public GameObject dialogue1;
@@ -52,8 +54,8 @@ public class GirlTalk : MonoBehaviour
     public GameObject buttonEnd;
 
 
-    public GameObject girlImage;
-    public GameObject rangerImage;
+    //public GameObject girlImage;
+    //public GameObject rangerImage;
 
     // Start is called before the first frame update
     void Start()
@@ -115,7 +117,7 @@ public class GirlTalk : MonoBehaviour
         dialogue1.SetActive(true);
         button1.SetActive(true);
 
-        girlImage.SetActive(true);
+        //girlImage.SetActive(true);
 
         if (dialogueUI.activeSelf)
         {
@@ -137,8 +139,8 @@ public class GirlTalk : MonoBehaviour
         button1.SetActive(false);
         button2.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next2()
@@ -149,8 +151,8 @@ public class GirlTalk : MonoBehaviour
         button2.SetActive(false);
         button3.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void Next3()
@@ -161,8 +163,8 @@ public class GirlTalk : MonoBehaviour
         button3.SetActive(false);
         button4.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next4()
@@ -173,8 +175,8 @@ public class GirlTalk : MonoBehaviour
         button4.SetActive(false);
         button5.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void Next5()
@@ -185,8 +187,8 @@ public class GirlTalk : MonoBehaviour
         button5.SetActive(false);
         button6.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next6()
@@ -197,8 +199,8 @@ public class GirlTalk : MonoBehaviour
         button6.SetActive(false);
         button7.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void Next7()
@@ -209,8 +211,8 @@ public class GirlTalk : MonoBehaviour
         button7.SetActive(false);
         button8.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next8()
@@ -221,8 +223,8 @@ public class GirlTalk : MonoBehaviour
         button8.SetActive(false);
         button9.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void Next9()
@@ -233,8 +235,8 @@ public class GirlTalk : MonoBehaviour
         button9.SetActive(false);
         button10.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next10()
@@ -245,8 +247,8 @@ public class GirlTalk : MonoBehaviour
         button10.SetActive(false);
         button11.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void Next11()
@@ -257,8 +259,8 @@ public class GirlTalk : MonoBehaviour
         button11.SetActive(false);
         button12.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next12()
@@ -269,8 +271,8 @@ public class GirlTalk : MonoBehaviour
         button12.SetActive(false);
         button13.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void Next13()
@@ -281,8 +283,8 @@ public class GirlTalk : MonoBehaviour
         button13.SetActive(false);
         button14.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next14()
@@ -293,8 +295,8 @@ public class GirlTalk : MonoBehaviour
         button14.SetActive(false);
         button15.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void Next15()
@@ -305,8 +307,8 @@ public class GirlTalk : MonoBehaviour
         button15.SetActive(false);
         button16.SetActive(true);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(true);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
     }
 
     public void Next16()
@@ -318,8 +320,8 @@ public class GirlTalk : MonoBehaviour
         button16.SetActive(false);
         buttonEnd.SetActive(true);
 
-        rangerImage.SetActive(false);
-        girlImage.SetActive(true);
+        //rangerImage.SetActive(false);
+        //girlImage.SetActive(true);
     }
 
     public void NextEnd()
@@ -328,13 +330,14 @@ public class GirlTalk : MonoBehaviour
 
         buttonEnd.SetActive(false);
 
-        girlImage.SetActive(false);
-        rangerImage.SetActive(false);
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(false);
 
         dialogueUI.SetActive(true);
 
         promptButton.SetActive(true);
 
+        playerController.ActivateFunctionByName(activateFun);
     }
 
 }

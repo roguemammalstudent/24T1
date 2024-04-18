@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Scene04.unity
     guid: 600ecfdf033567e46a074788a5e2552b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DeathScenes/ClinicDeathScene.unity
     guid: ef4bf1b1626b7af46be3e906aba87ce4
   - enabled: 1

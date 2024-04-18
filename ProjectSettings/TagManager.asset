@@ -10,7 +10,33 @@ TagManager:
   - Interactive
   - Cat
   - Airhorn
+  - Bird
   - BloodyBat
+  - BlueFlower
+  - BoozeBottle
+  - Cactus
+  - Chair
+  - Dress
+  - ExperimentVial
+  - FroggyHat
+  - JJBullet
+  - Key
+  - Knife
+  - LavaRock
+  - Mabel
+  - Note
+  - Boots
+  - Hat
+  - Jacket
+  - Jeans
+  - Pillow
+  - Potion
+  - SheriffBadge
+  - SunflowerSeeds
+  - TreasureMap
+  - Wife
+  - Wig
+  - Bush
   layers:
   - Default
   - TransparentFX
