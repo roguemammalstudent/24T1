@@ -10,6 +10,9 @@ public class Murder : MonoBehaviour
     public GameObject BlueFlower;
     public GameObject FroggyHat;
     public GameObject Jeans;
+    public GameObject Jacket;
+    public GameObject Boots;
+    public GameObject Hat;
 
 
 
@@ -17,6 +20,9 @@ public class Murder : MonoBehaviour
     void Start()
     {
         Jeans.SetActive(false);
+        Jacket.SetActive(false);
+        Boots.SetActive(false);
+        Hat.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,6 +49,39 @@ public class Murder : MonoBehaviour
         if (playerController.hasCollectedThePatientJeans == true)
         {
             Jeans.SetActive(false);
+        }
+
+        // Jacket
+        if (playerController.hasCollectedTheJacketQuest == true)
+        {
+            Jacket.SetActive(true);
+        }
+
+        if (playerController.hasCollectedThePatientJacket == true)
+        {
+            Jacket.SetActive(false);
+        }
+
+        // Boots
+        if (playerController.hasCollectedTheBootsQuest == true)
+        {
+            Boots.SetActive(true);
+        }
+
+        if (playerController.hasCollectedThePatientBoots == true)
+        {
+            Boots.SetActive(false);
+        }
+
+        // Hat
+        if (playerController.hasCollectedTheHatQuest == true)
+        {
+            Hat.SetActive(true);
+        }
+
+        if (playerController.hasCollectedThePatientHat == true)
+        {
+            Hat.SetActive(false);
         }
 
     }

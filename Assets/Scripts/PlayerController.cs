@@ -29,12 +29,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Cameras")]
     public GameObject mainCamera;
     public GameObject clinicCamera;
     public GameObject saloonCamera;
+    public GameObject saloonBalconyCamera;
     public GameObject cemeteryCamera;
+    public GameObject orphanAlleyCamera;
+    public GameObject houseCamera;
+    public GameObject hutCamera;
+    public GameObject townHallCamera;
 
     public Inventory inventoryUI;
+
+
+    public GameObject barkeepCanvas1;
+    public GameObject hatCanvas1;
+    public GameObject doctorCanvas1;
 
     [Header("Inventory Stuff")]
     [SerializeField] private int eyeparts;
@@ -56,7 +67,7 @@ public class PlayerController : MonoBehaviour
     public bool hasCollectedTheHappy = false;
     public bool hasCollectedTheHatQuest = false;
     public bool hasCollectedTheJJBullet = false;
-    public bool hasCollectedTheJacket = false;
+    public bool hasCollectedTheJacketQuest = false;
     public bool hasCollectedTheJeansQuest = false;
     public bool hasCollectedTheJustice = false;
     public bool hasCollectedTheKey = false;
@@ -223,6 +234,39 @@ public class PlayerController : MonoBehaviour
     public void ActivateFunctionByName(string functionName)
     {
         Invoke(functionName ,0);
+    }
+
+    public void collectTheBoozeQuest()
+    {
+        hasCollectedTheBoozeQuest = true;
+        barkeepCanvas1.SetActive(true);
+    }
+
+    public void collectTheQuietQuest()
+    {
+        hasCollectedTheQuietQuest = true;
+        hatCanvas1 .SetActive(true);
+    }
+
+    public void collectTheQuiet()
+    {
+        hasCollectedTheQuiet = true;
+    }
+
+    public void collectTheBoozeBottle()
+    {
+        hasCollectedTheBoozeBottle = true;
+    }
+
+    public void collectTheJJBullet()
+    {
+        hasCollectedTheJJBullet = true;
+    }
+
+    public void collectTheJeansQuest()
+    {
+        hasCollectedTheJeansQuest = true;
+        doctorCanvas1 .SetActive(true);
     }
 
     public void WellInteract()
