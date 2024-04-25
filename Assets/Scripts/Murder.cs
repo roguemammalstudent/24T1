@@ -13,6 +13,7 @@ public class Murder : MonoBehaviour
     public GameObject Jacket;
     public GameObject Boots;
     public GameObject Hat;
+    public GameObject MemoriamFlower;
 
 
 
@@ -23,6 +24,8 @@ public class Murder : MonoBehaviour
         Jacket.SetActive(false);
         Boots.SetActive(false);
         Hat.SetActive(false);
+
+        MemoriamFlower.SetActive(false);
     }
 
     // Update is called once per frame
@@ -82,6 +85,17 @@ public class Murder : MonoBehaviour
         if (playerController.hasCollectedThePatientHat == true)
         {
             Hat.SetActive(false);
+        }
+
+        // Memoriam
+        if (playerController.hasCollectedTheMemoriam == false)
+        {
+            MemoriamFlower.SetActive(false);
+        }
+
+        if (playerController.hasCollectedTheMemoriam == true)
+        {
+            MemoriamFlower.SetActive(true);
         }
 
     }

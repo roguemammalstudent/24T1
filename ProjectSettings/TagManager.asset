@@ -37,6 +37,15 @@ TagManager:
   - Wife
   - Wig
   - Bush
+  - ClinicDoor
+  - HouseDoor
+  - HutDoor
+  - OrphanDoor
+  - SaloonDownstairsDoor
+  - SaloonUpstairsDoor
+  - TownHallDoor
+  - CemeteryDoor
+  - MorganGrave
   layers:
   - Default
   - TransparentFX

@@ -29,7 +29,7 @@ public class Door : MonoBehaviour
         playerController.transform.position = teleportLocation.transform.position;
         teleportLocationCamera.SetActive(true);
         mainCamera.SetActive(false);
-        teleportLocationCamera.SetActive(true);
+        //teleportLocationCamera.SetActive(true);
     }
 
     public void Return()

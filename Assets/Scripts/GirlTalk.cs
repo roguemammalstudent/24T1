@@ -31,6 +31,7 @@ public class GirlTalk : MonoBehaviour
     public GameObject dialogue15;
     public GameObject dialogue16;
     public GameObject dialogue17;
+    public GameObject dialogue18;
     public GameObject dialogueEnd;
 
 
@@ -51,6 +52,7 @@ public class GirlTalk : MonoBehaviour
     public GameObject button15;
     public GameObject button16;
     public GameObject button17;
+    public GameObject button18;
     public GameObject buttonEnd;
 
 

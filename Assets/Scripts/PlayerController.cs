@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public GameObject wellInteractedText;
     public GameObject bushInteractiveText;
     public GameObject bushInteractedText;
+    public GameObject morganInteractiveText;
 
     public AudioSource AudioSource;
     public SoundManager soundManager;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private bool canWellInteract = false;
     private bool canBushInteract = false;
+    private bool canMorganInteract = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -48,8 +50,8 @@ public class PlayerController : MonoBehaviour
     public GameObject doctorCanvas1;
 
     [Header("Inventory Stuff")]
-    [SerializeField] private int eyeparts;
-    [SerializeField] private int coreparts;
+    //[SerializeField] private int eyeparts;
+    //[SerializeField] private int coreparts;
     public bool hasCollectedTheAirhorn = false;
     public bool hasCollectedTheBadgeQuest = false;
     public bool hasCollectedTheBird = false;
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
     public bool hasCollectedTheLavaRock = false;
     public bool hasCollectedTheMabel = false;
     public bool hasCollectedTheMemoriam = false;
+    public bool hasCollectedTheMemoriamQuest = false;
     public bool hasCollectedTheMemory = false;
     public bool hasCollectedTheMission = false;
     public bool hasCollectedTheNote = false;
@@ -100,15 +103,23 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if (wellInteractiveText!= null)
-        wellInteractiveText.SetActive(false);
-        if (wellInteractedText!= null)
-        wellInteractedText.SetActive(false);
 
+        // Barnaby Well -- Big Sippy
+        if (wellInteractiveText != null)
+            wellInteractiveText.SetActive(false);
+        if (wellInteractedText != null)
+            wellInteractedText.SetActive(false);
+
+        // Thamp Bush -- Airhorn
         if (bushInteractiveText != null)
             bushInteractiveText.SetActive(false);
         if (bushInteractedText != null)
             bushInteractedText.SetActive(false);
+
+        // Morgan's Grave -- Doctor Chuck
+        if (morganInteractiveText != null)
+            morganInteractiveText.SetActive(false);
+
     }
 
 
@@ -144,7 +155,12 @@ public class PlayerController : MonoBehaviour
             BushInteract();
         }
 
-        if (hasCollectedTheAirhorn == true);
+        if (Input.GetKeyDown(KeyCode.E) && canMorganInteract && hasCollectedTheMemoriamQuest && hasCollectedTheBlueFlower)
+        {
+            MorganInteract();
+        }
+
+        if (hasCollectedTheAirhorn == true) ;
 
         {
             AirhornFun();
@@ -172,6 +188,76 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if (collision.CompareTag("MorganGrave") && hasCollectedTheMemoriamQuest && hasCollectedTheBlueFlower)
+        {
+            canMorganInteract = true; morganInteractiveText.SetActive(true);
+
+        }
+
+        if (collision.CompareTag("ClinicDoor"))
+        {
+            transform.position = new Vector3(140, -2, 0);
+            clinicCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Clinic");
+        }
+
+        if (collision.CompareTag("HouseDoor"))
+        {
+            transform.position = new Vector3(96, -2, 0);
+            houseCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Jedediah's House");
+        }
+
+        if (collision.CompareTag("HutDoor"))
+        {
+            transform.position = new Vector3(217, -2, 0);
+            hutCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Susie's Hut");
+        }
+
+        if (collision.CompareTag("OrphanDoor"))
+        {
+            transform.position = new Vector3(122, -2, 0);
+            orphanAlleyCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Orphan Alley");
+        }
+
+        if (collision.CompareTag("SaloonDownstairsDoor"))
+        {
+            transform.position = new Vector3(112, -2, 0);
+            saloonCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Saloon");
+        }
+
+        if (collision.CompareTag("SaloonUpstairsDoor"))
+        {
+            transform.position = new Vector3(24, 74, 0);
+            saloonCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Saloon Upstairs");
+        }
+
+        if (collision.CompareTag("TownHallDoor"))
+        {
+            transform.position = new Vector3(164, -2, 0);
+            townHallCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Town Hall");
+        }
+
+        if (collision.CompareTag("CemeteryDoor"))
+        {
+            transform.position = new Vector3(180, -2, 0);
+            cemeteryCamera.SetActive(false);
+            mainCamera.SetActive(true);
+            Debug.Log("Exit Cemetery");
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -188,21 +274,26 @@ public class PlayerController : MonoBehaviour
             bushInteractedText.SetActive(false);
         }
 
+        if (collision.CompareTag("MorganGrave"))
         {
-            if (collision.CompareTag("Eye"))
-            {
-                Destroy(collision.gameObject);
-                eyeparts += 1; // Increment the parts by 1 
-                UpdateInventoryUI(); // Update the parts UI display 
-            }
-
-            if (collision.CompareTag("Core"))
-            {
-                Destroy(collision.gameObject);
-                coreparts += 1;
-                UpdateInventoryUI();
-            }
+            canMorganInteract = false; morganInteractiveText.SetActive(false);
         }
+
+        //{
+        //    if (collision.CompareTag("Eye"))
+        //    {
+        //        Destroy(collision.gameObject);
+        //        eyeparts += 1; // Increment the parts by 1 
+        //        UpdateInventoryUI(); // Update the parts UI display 
+        //    }
+
+        //    if (collision.CompareTag("Core"))
+        //    {
+        //        Destroy(collision.gameObject);
+        //        coreparts += 1;
+        //        UpdateInventoryUI();
+        //    }
+        //}
 
         if (collision.CompareTag("FroggyHat"))
         {
@@ -233,7 +324,7 @@ public class PlayerController : MonoBehaviour
 
     public void ActivateFunctionByName(string functionName)
     {
-        Invoke(functionName ,0);
+        Invoke(functionName, 0);
     }
 
     public void collectTheBoozeQuest()
@@ -245,7 +336,7 @@ public class PlayerController : MonoBehaviour
     public void collectTheQuietQuest()
     {
         hasCollectedTheQuietQuest = true;
-        hatCanvas1 .SetActive(true);
+        hatCanvas1.SetActive(true);
     }
 
     public void collectTheQuiet()
@@ -266,7 +357,7 @@ public class PlayerController : MonoBehaviour
     public void collectTheJeansQuest()
     {
         hasCollectedTheJeansQuest = true;
-        doctorCanvas1 .SetActive(true);
+        doctorCanvas1.SetActive(true);
     }
 
     public void WellInteract()
@@ -286,6 +377,12 @@ public class PlayerController : MonoBehaviour
 
         // interact after effects(?)
         hasCollectedTheAirhorn = true;
+    }
+
+    public void MorganInteract()
+    {
+        Debug.Log("Memoriam");
+        hasCollectedTheMemoriam = true;
     }
 
     public void AirhornFun()
@@ -316,6 +413,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+}
 
     //public void MoveToClinicInt()
     //{
@@ -324,8 +422,9 @@ public class PlayerController : MonoBehaviour
 
     //public void MoveToClinicExt()
     //{
+        
     //    transform.position = new Vector3(130, -1, 0);
-    //    saloonCamera.SetActive(false);
+    //    clinicCamera.SetActive(false);
     //    Debug.Log("Exit clinic");
     //}
 
@@ -337,6 +436,7 @@ public class PlayerController : MonoBehaviour
     //public void MoveToSaloonExt()
     //{
     //    transform.position = new Vector3(108, -1, 0);
+    //    saloonCamera.SetActive(false);
     //    Debug.Log("Exit outside saloon");
     //}
 
@@ -348,18 +448,18 @@ public class PlayerController : MonoBehaviour
     //public void MoveToCemeteryExt()
     //{
     //    transform.position = new Vector3(180, -1, 0);
-    //    saloonCamera.SetActive(false);
-    //    Debug.Log("Exit clinic");
+    //    cemeteryCamera.SetActive(false);
+    //    Debug.Log("Exit Cemetery");
     //}
 
 
-    public void UpdateInventoryUI()
-    {
-        if (inventoryUI != null)
-        {
-            inventoryUI.UpdateEyesDisplay(eyeparts);
-            inventoryUI.UpdateCoreDisplay(coreparts);
-        }
-    }
-}
+//    public void UpdateInventoryUI()
+//    {
+//        if (inventoryUI != null)
+//        {
+//            inventoryUI.UpdateEyesDisplay(eyeparts);
+//            inventoryUI.UpdateCoreDisplay(coreparts);
+//        }
+//    }
+//}
 
