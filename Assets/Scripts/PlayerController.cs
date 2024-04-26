@@ -360,6 +360,21 @@ public class PlayerController : MonoBehaviour
         doctorCanvas1.SetActive(true);
     }
 
+    public void collectTheJacketQuest()
+    {
+        hasCollectedTheJacketQuest = true;
+    }
+
+    public void collectTheMemoriamQuest()
+    {
+        hasCollectedTheMemoriamQuest = true;
+    }
+
+    public void collectThePeteyPlan()
+    {
+        hasCollectedThePeteyPlan = true;
+    }
+
     public void WellInteract()
     {
         Debug.Log("Interacted!");

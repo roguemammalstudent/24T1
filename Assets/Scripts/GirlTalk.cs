@@ -32,6 +32,10 @@ public class GirlTalk : MonoBehaviour
     public GameObject dialogue16;
     public GameObject dialogue17;
     public GameObject dialogue18;
+    public GameObject dialogue19;
+    public GameObject dialogue20;
+    public GameObject dialogue21;
+    public GameObject dialogue22;
     public GameObject dialogueEnd;
 
 
@@ -53,6 +57,10 @@ public class GirlTalk : MonoBehaviour
     public GameObject button16;
     public GameObject button17;
     public GameObject button18;
+    public GameObject button19;
+    public GameObject button20;
+    public GameObject button21;
+    public GameObject button22;
     public GameObject buttonEnd;
 
 
@@ -316,10 +324,86 @@ public class GirlTalk : MonoBehaviour
     public void Next16()
     {
         dialogue16.SetActive(false);
+        dialogue17.SetActive(true);
+
+        button16.SetActive(false);
+        button17.SetActive(true);
+
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
+    }
+
+    public void Next17()
+    {
+        dialogue17.SetActive(false);
+        dialogue18.SetActive(true);
+
+        button17.SetActive(false);
+        button18.SetActive(true);
+
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
+    }
+
+    public void Next18()
+    {
+        dialogue18.SetActive(false);
+        dialogue19.SetActive(true);
+
+        button18.SetActive(false);
+        button19.SetActive(true);
+
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
+    }
+
+    public void Next19()
+    {
+        dialogue19.SetActive(false);
+        dialogue20.SetActive(true);
+
+        button19.SetActive(false);
+        button20.SetActive(true);
+
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
+    }
+
+    public void Next20()
+    {
+        dialogue20.SetActive(false);
+        dialogue21.SetActive(true);
+
+        button20.SetActive(false);
+        button21.SetActive(true);
+
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
+    }
+
+    public void Next21()
+    {
+        dialogue21.SetActive(false);
+        dialogue22.SetActive(true);
+
+        button21.SetActive(false);
+        button22.SetActive(true);
+
+        //girlImage.SetActive(false);
+        //rangerImage.SetActive(true);
+    }
+
+
+
+
+
+    public void Next22()
+    {
+        dialogue22.SetActive(false);
         dialogueEnd.SetActive(true);
 
-        button15.SetActive(false);
-        button16.SetActive(false);
+        button21.SetActive(false);
+        button22.SetActive(false);
         buttonEnd.SetActive(true);
 
         //rangerImage.SetActive(false);

@@ -37,6 +37,24 @@ public class Murder : MonoBehaviour
             BlueFlower.SetActive(false);
         }
 
+        //if (mainCamera.activeSelf && !playerController.hasCollectedTheAirhorn)
+        //{
+            //canvas1.SetActive(true);
+        //}
+        //else
+        //{
+            //canvas1.SetActive(false);
+        //}
+
+        //if (mainCamera.activeSelf && playerController.hasCollectedTheAirhorn)
+        //{
+            //canvas2.SetActive(true);
+        //}
+        //else
+        //{
+            //canvas2.SetActive(false);
+        //}
+
         // Froggy Hat
         if (playerController.hasCollectedTheFroggyHat == true)
         {
