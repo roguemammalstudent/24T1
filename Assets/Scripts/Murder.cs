@@ -13,7 +13,10 @@ public class Murder : MonoBehaviour
     public GameObject Jacket;
     public GameObject Boots;
     public GameObject Hat;
+    public GameObject John;
+    public GameObject johnCanvas;
     public GameObject MemoriamFlower;
+
 
 
 
@@ -103,6 +106,12 @@ public class Murder : MonoBehaviour
         if (playerController.hasCollectedThePatientHat == true)
         {
             Hat.SetActive(false);
+        }
+
+        if (playerController.hasCollectedTheSheriffBadge == true)
+        {
+            John.SetActive(false);
+            johnCanvas.SetActive(false);
         }
 
         // Memoriam
