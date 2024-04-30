@@ -25,10 +25,18 @@ public class Murder : MonoBehaviour
     {
         Jeans.SetActive(false);
         Jacket.SetActive(false);
-        Boots.SetActive(false);
-        Hat.SetActive(false);
-
-        MemoriamFlower.SetActive(false);
+        if (Boots != null)
+        {
+            Boots.SetActive(false);
+        }
+        if (Hat != null)
+        {
+            Hat.SetActive(false);
+        }
+        if (MemoriamFlower != null)
+        {
+            MemoriamFlower.SetActive(false);
+        }
     }
 
     // Update is called once per frame

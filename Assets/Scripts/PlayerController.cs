@@ -100,6 +100,11 @@ public class PlayerController : MonoBehaviour
     public bool hasCollectedTheWifeDeployed = false;
     public bool hasCollectedTheWig = false;
 
+    [Header("people")]
+    public GameObject patientOne;
+    public GameObject patientTwo;
+
+
 
     void Start()
     {
@@ -160,8 +165,7 @@ public class PlayerController : MonoBehaviour
             MorganInteract();
         }
 
-        if (hasCollectedTheAirhorn == true) ;
-
+        if (hasCollectedTheAirhorn)
         {
             AirhornFun();
         }
@@ -238,8 +242,9 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(24, 74, 0);
             saloonCamera.SetActive(false);
-            mainCamera.SetActive(true);
+            saloonBalconyCamera.SetActive(true);
             Debug.Log("Exit Saloon Upstairs");
+
         }
 
         if (collision.CompareTag("TownHallDoor"))
@@ -310,10 +315,10 @@ public class PlayerController : MonoBehaviour
             hasCollectedTheBlueFlower = true;
         }
 
-        if (collision.CompareTag("Quiet"))
+/*        if (collision.CompareTag("Quiet"))
         {
             hasCollectedTheBoozeBottle = true;
-        }
+        }*/
 
         if (collision.CompareTag("Jeans"))
         {
@@ -325,6 +330,16 @@ public class PlayerController : MonoBehaviour
     public void ActivateFunctionByName(string functionName)
     {
         Invoke(functionName, 0);
+        // if function name is has completed__quest, disable the first game object and enable the next
+        if (functionName == "hasCollectedTheJeansQuest")
+        {
+            patientOne.SetActive(false);
+            patientTwo.SetActive(true);
+        }
+        else if (functionName == "hasCollectedTheJacketQuest")
+        {
+
+        }
     }
 
     public void collectTheBoozeQuest()

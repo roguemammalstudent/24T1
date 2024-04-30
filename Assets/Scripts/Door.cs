@@ -12,30 +12,22 @@ public class Door : MonoBehaviour
 
     public GameObject mainCamera;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Teleport()
+    public void Teleport(string canvas)
     {
         playerController.transform.position = teleportLocation.transform.position;
         teleportLocationCamera.SetActive(true);
         mainCamera.SetActive(false);
+        Kyle.Instance.SetCanvas(canvas, true);
+        Ruby.Instance.SetCanvas(canvas, true);
         //teleportLocationCamera.SetActive(true);
     }
 
-    public void Return()
+    public void Return(string canvas)
     {
         playerController.transform.position = returnLocation.transform.position;
         mainCamera.SetActive(true);
         teleportLocationCamera.SetActive(false);
+        Kyle.Instance.SetCanvas(canvas, false);
+        Ruby.Instance.SetCanvas(canvas, false);
     }
 }

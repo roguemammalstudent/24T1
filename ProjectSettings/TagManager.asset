@@ -46,6 +46,8 @@ TagManager:
   - TownHallDoor
   - CemeteryDoor
   - MorganGrave
+  - Quiet
+  - SaloonUpstairsExit
   layers:
   - Default
   - TransparentFX

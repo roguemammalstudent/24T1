@@ -424,6 +424,7 @@ public class GirlTalk : MonoBehaviour
         promptButton.SetActive(true);
 
         playerController.ActivateFunctionByName(activateFun);
+
     }
 
 }
