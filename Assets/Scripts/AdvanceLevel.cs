@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class AdvanceLevel : MonoBehaviour
 {
-    //public GameObject wall;
-    //public bool isDone;
-
-    private void Update()
-    {
-        //if (isDone == true)
-        //{
-        //    wall.SetActive(false);
-        //}
-
-    }
-
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (gameObject.CompareTag("Right") && other.gameObject.CompareTag("Player")) // And bool spelt correct

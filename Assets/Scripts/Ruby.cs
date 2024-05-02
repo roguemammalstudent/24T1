@@ -21,6 +21,7 @@ public class Ruby : MonoBehaviour
     {
         clinicCanvas.SetActive(false);
         saloonDownstairsCanvas.SetActive(false);
+        saloonUpstairsCanvas.SetActive(false);
         townHallCanvas.SetActive(false);
     }
 

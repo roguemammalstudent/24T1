@@ -48,6 +48,13 @@ TagManager:
   - MorganGrave
   - Quiet
   - SaloonUpstairsExit
+  - Eye
+  - Miso
+  - Cookie
+  - Daniel
+  - Yoghurt
+  - Herbert
+  - Jenkins
   layers:
   - Default
   - TransparentFX

@@ -10,12 +10,28 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float jumpingPower = 16f;
 
-    // Interactive texts
+    public GameObject beginningWall;
+
+    [Header("Interactive Texts")]
     public GameObject wellInteractiveText;
     public GameObject wellInteractedText;
     public GameObject bushInteractiveText;
     public GameObject bushInteractedText;
     public GameObject morganInteractiveText;
+
+    [Header("cat texts")]
+    public GameObject misoPatText;
+    public GameObject misoPattedText;
+    public GameObject cookiePatText;
+    public GameObject cookiePattedText;
+    public GameObject danielPatText;
+    public GameObject danielPattedText;
+    public GameObject yoghurtPatText;
+    public GameObject yoghurtPattedText;
+    public GameObject herbertPatText;
+    public GameObject herbertPattedText;
+    public GameObject jenkinsPatText;
+    public GameObject jenkinsPattedText;
 
     public AudioSource AudioSource;
     public SoundManager soundManager;
@@ -26,6 +42,12 @@ public class PlayerController : MonoBehaviour
     private bool canWellInteract = false;
     private bool canBushInteract = false;
     private bool canMorganInteract = false;
+    private bool canMisoPat = false;
+    private bool canCookiePat = false;
+    private bool canDanielPat = false;
+    private bool canYoghurtPat = false;
+    private bool canHerbertPat = false;
+    private bool canJenkinsPat = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -54,6 +76,7 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private int coreparts;
     public bool hasCollectedTheAirhorn = false;
     public bool hasCollectedTheBadgeQuest = false;
+    public bool hasCollectedTheBeginning = false;
     public bool hasCollectedTheBird = false;
     public bool hasCollectedTheBloodyBat = false;
     public bool hasCollectedTheBlueFlower = false;
@@ -100,10 +123,93 @@ public class PlayerController : MonoBehaviour
     public bool hasCollectedTheWifeDeployed = false;
     public bool hasCollectedTheWig = false;
 
-    [Header("people")]
-    public GameObject patientOne;
-    public GameObject patientTwo;
+    [Header("get people'd idiot")]
+    // The Patient
+    public GameObject patientPrime;
+    public GameObject patientJeans;
+    public GameObject patientJacket;
+    public GameObject patientBoots;
+    public GameObject patientHat;
+    public GameObject patientBadge;
+    public GameObject patientHealed;
 
+    // Doctor Chuck
+    public GameObject doctorPrime;
+    public GameObject doctorQuest;
+    public GameObject doctorFlowerDelivered;
+    public GameObject doctorQuestCompleted;
+    public GameObject doctorIngredient;
+
+    // Poor Petey
+    public GameObject peteyPrime;
+    public GameObject peteyInstructions;
+    public GameObject peteyWifed;
+    public GameObject peteyDeployed;
+    public GameObject peteyRansacked;
+    public GameObject peteyBat;
+
+    // Susie
+    public GameObject susiePrime;
+    public GameObject susieInstructions;
+    public GameObject susieDelivered;
+    public GameObject susieBrewed;
+    public GameObject susieComplete;
+    public GameObject susieRemarks;
+
+    // Jebediah
+    public GameObject jebediahPrime;
+    public GameObject jebediahFriend;
+    public GameObject jebediahComplete;
+
+    // Mayor Thamp
+    public GameObject mayorPrime;
+    public GameObject mayorHappy;
+    public GameObject mayorComplete;
+    public GameObject mayorIngredient;
+
+    [Header("Get conversation'd idiot")]
+    // The Patient
+    public GameObject patientPrimeConversation;
+    public GameObject patientJeansConversation;
+    public GameObject patientJacketConversation;
+    public GameObject patientBootsConversation;
+    public GameObject patientHatConversation;
+    public GameObject patientBadgeConversation;
+    public GameObject patientHealedConversation;
+
+    // Doctor Chuck
+    public GameObject doctorPrimeConversation;
+    public GameObject doctorQuestConversation;
+    public GameObject doctorFlowerDeliveredConversation;
+    public GameObject doctorQuestCompletedConversation;
+    public GameObject doctorIngredientConversation;
+
+    // Poor Petey
+    public GameObject peteyPrimeConversation;
+    public GameObject peteyInstructionsConversation;
+    public GameObject peteyWifedConversation;
+    public GameObject peteyDeployedConversation;
+    public GameObject peteyRansackedConversation;
+    public GameObject peteyBatConversation;
+
+    // Susie
+    public GameObject susiePrimeConversation;
+    public GameObject susieInstructionsConversation;
+    public GameObject susieDeliveredConversation;
+    public GameObject susieBrewedConversation;
+    public GameObject susieCompleteConversation;
+    public GameObject susieRemarksConversation;
+
+    // Jebediah
+    public GameObject jebediahPrimeConversation;
+    public GameObject jebediahFriendConversation;
+    public GameObject jebediahCompleteConversation;
+
+    // Mayor Thamp
+    public GameObject mayorPrimeConversation;
+    public GameObject mayorHappyConversation;
+    public GameObject mayorCompleteConversation;
+    public GameObject mayorIngredientConversation;
 
 
     void Start()
@@ -124,6 +230,45 @@ public class PlayerController : MonoBehaviour
         // Morgan's Grave -- Doctor Chuck
         if (morganInteractiveText != null)
             morganInteractiveText.SetActive(false);
+
+        // Cats
+        // Miso
+        if (misoPatText != null)
+            misoPatText.SetActive(false);
+        if (misoPattedText != null)
+            misoPattedText.SetActive(false);
+
+        // Cookie
+        if (cookiePatText != null)
+            cookiePatText.SetActive(false);
+        if (cookiePattedText != null)
+            cookiePattedText.SetActive(false);
+
+        // Daniel
+        if (danielPatText != null)
+            danielPatText.SetActive(false);
+        if (danielPattedText != null)
+            danielPattedText.SetActive(false);
+
+        // Yoghurt
+        if (yoghurtPatText != null)
+            yoghurtPatText.SetActive(false);
+        if (yoghurtPattedText != null)
+            yoghurtPattedText.SetActive(false);
+
+        // Herbert
+        if (herbertPatText != null)
+            herbertPatText.SetActive(false);
+        if (herbertPattedText != null)
+            herbertPattedText.SetActive(false);
+
+        // Jenkins
+        if (jenkinsPatText !=null)
+            jenkinsPatText.SetActive(false);
+        if (jenkinsPattedText != null)
+            jenkinsPattedText.SetActive(false);
+
+        beginningWall.SetActive(true);
 
     }
 
@@ -160,6 +305,43 @@ public class PlayerController : MonoBehaviour
             BushInteract();
         }
 
+        // Cats input
+        if (Input.GetKeyDown(KeyCode.E) && canMisoPat)
+        {
+            MisoPat();
+            soundManager.CatPatSound();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && canCookiePat)
+        {
+            CookiePat();
+            soundManager.CatPatSound();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && canDanielPat)
+        {
+            DanielPat();
+            soundManager.CatPatSound();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && canYoghurtPat)
+        {
+            YoghurtPat();
+            soundManager.CatPatSound();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && canHerbertPat)
+        {
+            HerbertPat();
+            soundManager.CatPatSound();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && canJenkinsPat)
+        {
+            JenkinsPat();
+            soundManager.JenkinsPatSound();
+        }
+
         if (Input.GetKeyDown(KeyCode.E) && canMorganInteract && hasCollectedTheMemoriamQuest && hasCollectedTheBlueFlower)
         {
             MorganInteract();
@@ -168,6 +350,13 @@ public class PlayerController : MonoBehaviour
         if (hasCollectedTheAirhorn)
         {
             AirhornFun();
+        }
+
+        // Cats again
+
+        if (Input.GetKeyDown(KeyCode.E) && canWellInteract)
+        {
+            WellInteract();
         }
 
     }
@@ -184,6 +373,42 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("You have collected the froggy hat!");
             }
+        }
+
+        if (collision.CompareTag("Miso"))
+        {
+            canMisoPat = true; misoPatText.SetActive(true);
+
+        }
+
+        if (collision.CompareTag("Cookie"))
+        {
+            canCookiePat = true; cookiePatText.SetActive(true);
+
+        }
+
+        if (collision.CompareTag("Daniel"))
+        {
+            canDanielPat = true; danielPatText.SetActive(true);
+
+        }
+
+        if (collision.CompareTag("Yoghurt"))
+        {
+            canYoghurtPat = true; yoghurtPatText.SetActive(true);
+
+        }
+
+        if (collision.CompareTag("Herbert"))
+        {
+            canHerbertPat = true; herbertPatText.SetActive(true);
+
+        }
+
+        if (collision.CompareTag("Jenkins"))
+        {
+            canJenkinsPat = true; jenkinsPatText.SetActive(true);
+
         }
 
         if (collision.CompareTag("Bush"))
@@ -269,14 +494,58 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Interactive"))
         {
-            canWellInteract = false; wellInteractiveText.SetActive(false);
+            canWellInteract = false; 
+            wellInteractiveText.SetActive(false);
             wellInteractedText.SetActive(false);
         }
 
         if (collision.CompareTag("Bush"))
         {
-            canBushInteract = false; bushInteractiveText.SetActive(false);
+            canBushInteract = false; 
+            bushInteractiveText.SetActive(false);
             bushInteractedText.SetActive(false);
+        }
+
+        if (collision.CompareTag("Miso"))
+        {
+            canMisoPat = false;
+            misoPatText.SetActive(false);
+            misoPattedText.SetActive(false);
+        }
+
+        if (collision.CompareTag("Cookie"))
+        {
+            canCookiePat = false;
+            cookiePatText.SetActive(false);
+            cookiePattedText.SetActive(false);
+        }
+
+        if (collision.CompareTag("Daniel"))
+        {
+            canDanielPat = false;
+            danielPatText.SetActive(false);
+            danielPattedText.SetActive(false);
+        }
+
+        if (collision.CompareTag("Yoghurt"))
+        {
+            canYoghurtPat = false;
+            yoghurtPatText.SetActive(false);
+            yoghurtPattedText.SetActive(false);
+        }
+
+        if (collision.CompareTag("Herbert"))
+        {
+            canHerbertPat = false;
+            herbertPatText.SetActive(false);
+            herbertPattedText.SetActive(false);
+        }
+
+        if (collision.CompareTag("Jenkins"))
+        {
+            canJenkinsPat = false;
+            jenkinsPatText.SetActive(false);
+            jenkinsPattedText.SetActive(false);
         }
 
         if (collision.CompareTag("MorganGrave"))
@@ -331,17 +600,176 @@ public class PlayerController : MonoBehaviour
     {
         Invoke(functionName, 0);
         // if function name is has completed__quest, disable the first game object and enable the next
-        if (functionName == "hasCollectedTheJeansQuest")
+
+        // Collect the jeans, unlock jacket quest
+        if (functionName == "hasCollectedTheJeans")
         {
-            patientOne.SetActive(false);
-            patientTwo.SetActive(true);
+            patientPrime.SetActive(false);
+            patientJeans.SetActive(true);
         }
-        else if (functionName == "hasCollectedTheJacketQuest")
+
+        // Collect the jacket, unlock boots quest
+        else if (functionName == "hasCollectedTheJacket")
         {
+            patientJeans.SetActive(false);
+            patientJacket.SetActive(true);
+        }
+
+        // Collect the boots, unlock hat quest
+        else if (functionName == "hasCollectedTheBoots")
+        {
+            patientJacket.SetActive(false);
+            patientBoots.SetActive(true);
+        }
+
+        // Collect the hat, unlock the badge quest
+        else if (functionName == "hasCollectedTheHat")
+        {
+            patientBoots.SetActive(false);
+            patientHat.SetActive(true);
+        }
+
+        // Collect the badge, unlock the treasure map
+        else if (functionName == "hasCollectedTheBadge")
+        {
+            patientHat.SetActive(false);
+            patientBadge.SetActive(true);
+        }
+
+        // Final conversation
+        else if (functionName == "hasCollectedTheTreasureMap")
+        {
+            patientBadge.SetActive(false);
+            patientHealed.SetActive(true);
+        }
+
+        // Doctor Chuck
+        // Collect the jeans quest, speak to Doctor
+        else if (functionName == "hasCollectedTheJeansQuest")
+        {
+            doctorPrime.SetActive(false);
+            doctorQuest.SetActive(true);
+        }
+
+        // Laid the flower, return for Gratitude
+        else if (functionName == "hasCollectedTheMemoriam")
+        {
+            doctorQuest.SetActive(false);
+            doctorFlowerDelivered.SetActive(true);
+        }
+
+        // Have Gratitude, DON'T have Susie's quest active
+        else if (functionName == "hasCollectedTheGratitude")
+        {
+            doctorFlowerDelivered.SetActive(false);
+            doctorQuestCompleted.SetActive(true);
+        }
+
+        // Have Gratitude, AND have Susie's quest active (PotionQuest)
+        else if (functionName == "hasCollectedTheMemoriam" && functionName == "hasCollectedThePotionQuest")
+        {
+            doctorQuestCompleted.SetActive(false);
+            doctorIngredient.SetActive(true);
+        }
+
+        // Have Gratitude, AND have the experimental vial (PotionQuest)
+        else if (functionName == "hasCollectedTheMemoriam" && functionName == "hasCollectedTheExperimentalVial")
+        {
+            doctorIngredient.SetActive(false);
+            doctorQuestCompleted.SetActive(true);
+        }
+
+        // Petey
+        // Speak to again after first time without ingredients
+        else if (functionName == "hasCollectedThePeteyPlan")
+        {
+            peteyPrime.SetActive(false);
+            peteyInstructions.SetActive(true);
+        }
+
+        // Return to Petey with the ingredients
+        else if (functionName == "hasCollectedTheCactus" && functionName == "hasCollectedTheDress" && functionName == "hasCollectedTheWig")
+        {
+            peteyInstructions.SetActive(false);
+            peteyWifed.SetActive(true);
+        }
+
+        // Speak to Petey after deploying the decoy
+        else if (functionName == "hasCollectedThePeteyPlan")
+        {
+            peteyWifed.SetActive(false);
+            peteyDeployed.SetActive(true);
+        }
+
+        // Speak to Petey again after ransacking Jebediah's home
+        else if (functionName == "hasCollectedTheChair" && functionName == "hasCollectedTheKnife" && functionName == "hasCollectedThePillow")
+        {
+            peteyDeployed.SetActive(false);
+            peteyRansacked.SetActive(true);
+        }
+
+        // Speak to Petey anytime after completing his quest
+        else if (functionName == "hasCollectedTheBloodyBat")
+        {
+            peteyRansacked.SetActive(false);
+            peteyBat.SetActive(true);
+        }
+
+        // Susie
+        // Speak to Susie for the second time
+        else if (functionName == "hasCollectedThePotionQuest")
+        {
+            peteyRansacked.SetActive(false);
+            peteyBat.SetActive(true);
+        }
+
+        // Jebediah
+        // 
+        else if (functionName == "hasCollectedTheWife")
+        {
+            jebediahPrime.SetActive(false);
+            jebediahFriend.SetActive(true);
+        }
+
+        else if (functionName == "hasCollectedTheWifeDeployed")
+        {
+            jebediahFriend.SetActive(false);
+            jebediahComplete.SetActive(true);
+        }
+
+        // Mayor Thamp
+        else if (functionName == "hasCollectedTheBird")
+        {
+            mayorPrime.SetActive(false);
+            mayorHappy.SetActive(true);
+        }
+
+        else if (functionName == "hasCollectedTheHappy")
+        {
+            mayorHappy.SetActive(false);
+            mayorComplete.SetActive(true);
+        }
+        
+        
+        else if (functionName == "hasCollectedThePotionQuest" && functionName == "hasCollectedTheNote")
+        {
+            mayorComplete.SetActive(false);
+            mayorIngredient.SetActive(true);
+        }
+
+        else if (functionName == "hasCollectedTheSunflowerSeeds")
+        {
+            mayorIngredient.SetActive(false);
+            mayorComplete.SetActive(true);
 
         }
+
     }
-
+    public void collectTheBeginning()
+    {
+        hasCollectedTheBeginning = true;
+        beginningWall.SetActive(false);
+    }
     public void collectTheBoozeQuest()
     {
         hasCollectedTheBoozeQuest = true;
@@ -407,6 +835,48 @@ public class PlayerController : MonoBehaviour
 
         // interact after effects(?)
         hasCollectedTheAirhorn = true;
+    }
+
+    public void MisoPat()
+    {
+        Debug.Log("Pat!");
+        // put what u want to happen in here 
+        misoPattedText.SetActive(true);
+    }
+
+    public void CookiePat()
+    {
+        Debug.Log("Pat!");
+        // put what u want to happen in here 
+        cookiePattedText.SetActive(true);
+    }
+
+    public void DanielPat()
+    {
+        Debug.Log("Pat!");
+        // put what u want to happen in here 
+        danielPattedText.SetActive(true);
+    }
+
+    public void YoghurtPat()
+    {
+        Debug.Log("Pat!");
+        // put what u want to happen in here 
+        yoghurtPattedText.SetActive(true);
+    }
+
+    public void HerbertPat()
+    {
+        Debug.Log("Pat!");
+        // put what u want to happen in here 
+        herbertPattedText.SetActive(true);
+    }
+
+    public void JenkinsPat()
+    {
+        Debug.Log("Pat!");
+        // put what u want to happen in here 
+        jenkinsPattedText.SetActive(true);
     }
 
     public void MorganInteract()

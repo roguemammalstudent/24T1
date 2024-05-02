@@ -40,4 +40,14 @@ public class SoundManager : MonoBehaviour
         PlaySoundEffect(0);
     }
 
+    public void CatPatSound()
+    {
+        PlaySoundEffect(1);
+    }
+
+    public void JenkinsPatSound()
+    {
+        PlaySoundEffect(2);
+    }
+
 }
