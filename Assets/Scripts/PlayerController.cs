@@ -605,42 +605,54 @@ public class PlayerController : MonoBehaviour
         if (functionName == "hasCollectedTheJeans")
         {
             patientPrime.SetActive(false);
+            patientPrimeConversation.SetActive(false);
             patientJeans.SetActive(true);
+            patientJeansConversation.SetActive(true);
         }
 
         // Collect the jacket, unlock boots quest
         else if (functionName == "hasCollectedTheJacket")
         {
             patientJeans.SetActive(false);
+            patientJeansConversation.SetActive(false);
             patientJacket.SetActive(true);
+            patientJacketConversation.SetActive(true);
         }
 
         // Collect the boots, unlock hat quest
         else if (functionName == "hasCollectedTheBoots")
         {
             patientJacket.SetActive(false);
+            patientJacketConversation.SetActive(false);
             patientBoots.SetActive(true);
+            patientBootsConversation.SetActive(true);
         }
 
         // Collect the hat, unlock the badge quest
         else if (functionName == "hasCollectedTheHat")
         {
             patientBoots.SetActive(false);
+            patientBootsConversation.SetActive(false);
             patientHat.SetActive(true);
+            patientHatConversation.SetActive(true);
         }
 
         // Collect the badge, unlock the treasure map
         else if (functionName == "hasCollectedTheBadge")
         {
             patientHat.SetActive(false);
+            patientHatConversation.SetActive(false);
             patientBadge.SetActive(true);
+            patientBadgeConversation.SetActive(true);
         }
 
         // Final conversation
         else if (functionName == "hasCollectedTheTreasureMap")
         {
             patientBadge.SetActive(false);
+            patientBadgeConversation.SetActive(false);
             patientHealed.SetActive(true);
+            patientHealedConversation.SetActive(true);
         }
 
         // Doctor Chuck
@@ -648,21 +660,27 @@ public class PlayerController : MonoBehaviour
         else if (functionName == "hasCollectedTheJeansQuest")
         {
             doctorPrime.SetActive(false);
+            doctorPrimeConversation.SetActive(false);
             doctorQuest.SetActive(true);
+            doctorQuestConversation.SetActive(true);
         }
 
         // Laid the flower, return for Gratitude
         else if (functionName == "hasCollectedTheMemoriam")
         {
             doctorQuest.SetActive(false);
+            doctorQuestConversation.SetActive(false);
             doctorFlowerDelivered.SetActive(true);
+            doctorFlowerDeliveredConversation.SetActive(true);
         }
 
         // Have Gratitude, DON'T have Susie's quest active
         else if (functionName == "hasCollectedTheGratitude")
         {
             doctorFlowerDelivered.SetActive(false);
+            doctorFlowerDeliveredConversation.SetActive(false);
             doctorQuestCompleted.SetActive(true);
+            doctorQuestCompletedConversation.SetActive(true);
         }
 
         // Have Gratitude, AND have Susie's quest active (PotionQuest)
@@ -800,7 +818,10 @@ public class PlayerController : MonoBehaviour
     public void collectTheJeansQuest()
     {
         hasCollectedTheJeansQuest = true;
-        doctorCanvas1.SetActive(true);
+        doctorPrime.SetActive(false);
+        doctorPrimeConversation.SetActive(false);
+        doctorQuest.SetActive(true);
+        doctorQuestConversation.SetActive(true);
     }
 
     public void collectTheJacketQuest()
@@ -811,6 +832,24 @@ public class PlayerController : MonoBehaviour
     public void collectTheMemoriamQuest()
     {
         hasCollectedTheMemoriamQuest = true;
+    }
+
+    public void collectTheMemoriam()
+    {
+        hasCollectedTheMemoriam = true;
+        doctorQuest.SetActive(false);
+        doctorQuestConversation.SetActive(false);
+        doctorFlowerDelivered.SetActive(true);
+        doctorFlowerDeliveredConversation.SetActive(true);
+    }
+
+    public void collectTheGratitude()
+    {
+        hasCollectedTheGratitude = true;
+        doctorFlowerDelivered.SetActive(false);
+        doctorFlowerDeliveredConversation.SetActive(false);
+        doctorQuestCompleted.SetActive(true);
+        doctorQuestCompletedConversation.SetActive(true);
     }
 
     public void collectThePeteyPlan()

@@ -4630,7 +4630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clinicCanvas: {fileID: 1169904587}
-  saloonDownstairsCanvas: {fileID: 2144793879}
   saloonUpstairsCanvas: {fileID: 1031162136}
   townHallCanvas: {fileID: 0}
 --- !u!4 &120382088
@@ -60841,7 +60840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 746447589203180299, guid: fce37c3a0b26a354ab29808428219286, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1369638633569607853, guid: fce37c3a0b26a354ab29808428219286, type: 3}
       propertyPath: m_LocalPosition.x
@@ -102003,7 +102002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: speed
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: peteyBat
@@ -102351,7 +102350,7 @@ PrefabInstance:
       objectReference: {fileID: 2026792302}
     - target: {fileID: 6089111409922850177, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.8
+      value: 134
       objectReference: {fileID: 0}
     - target: {fileID: 6089111409922850177, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: m_LocalPosition.y

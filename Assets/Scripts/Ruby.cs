@@ -7,7 +7,7 @@ public class Ruby : MonoBehaviour
     public static Ruby Instance;
 
     public GameObject clinicCanvas;
-    public GameObject saloonDownstairsCanvas;
+   // public GameObject saloonDownstairsCanvas;
     public GameObject saloonUpstairsCanvas;
     public GameObject townHallCanvas;
 
@@ -20,7 +20,7 @@ public class Ruby : MonoBehaviour
     void Start()
     {
         clinicCanvas.SetActive(false);
-        saloonDownstairsCanvas.SetActive(false);
+    //    saloonDownstairsCanvas.SetActive(false);
         saloonUpstairsCanvas.SetActive(false);
         townHallCanvas.SetActive(false);
     }
@@ -30,7 +30,7 @@ public class Ruby : MonoBehaviour
         if (canvas == "clinic")
         {
             SetClinicCanvas(enable);
-            SetSaloonDownstairsCanvas(!enable);
+       //     SetSaloonDownstairsCanvas(!enable);
             SetSaloonUpstairsCanvas(!enable);
             SetTownHallCanvas(!enable);
         }
@@ -38,7 +38,7 @@ public class Ruby : MonoBehaviour
         else if (canvas == "saloondownstairs")
         {
             SetClinicCanvas(!enable);
-            SetSaloonDownstairsCanvas(enable);
+         //   SetSaloonDownstairsCanvas(enable);
             SetSaloonUpstairsCanvas(!enable);
             SetTownHallCanvas(!enable);
         }
@@ -46,7 +46,7 @@ public class Ruby : MonoBehaviour
         else if (canvas == "saloonupstairs")
         {
             SetClinicCanvas(!enable);
-            SetSaloonDownstairsCanvas(!enable);
+          //  SetSaloonDownstairsCanvas(!enable);
             SetSaloonUpstairsCanvas(enable);
             SetTownHallCanvas(!enable);
         }
@@ -54,7 +54,7 @@ public class Ruby : MonoBehaviour
         else if (canvas == "townhall")
         {
             SetClinicCanvas(!enable);
-            SetSaloonDownstairsCanvas(!enable);
+         //   SetSaloonDownstairsCanvas(!enable);
             SetSaloonUpstairsCanvas(!enable);
             SetTownHallCanvas(enable);
         }
@@ -66,10 +66,10 @@ public class Ruby : MonoBehaviour
         clinicCanvas.SetActive(enable);
     }
 
-    public void SetSaloonDownstairsCanvas(bool enable)
-    {
-        saloonDownstairsCanvas.SetActive(enable);
-    }
+    //public void SetSaloonDownstairsCanvas(bool enable)
+    //{
+    //    saloonDownstairsCanvas.SetActive(enable);
+    //}
     public void SetSaloonUpstairsCanvas(bool enable)
     {
         saloonUpstairsCanvas.SetActive(enable);
