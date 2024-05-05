@@ -855,11 +855,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6169871677269396947, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
   m_PrefabInstance: {fileID: 7019842744590801395}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &788443662 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6500673293755539040, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-  m_PrefabInstance: {fileID: 7019842744590801395}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &834669058 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2602024630461306044, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
@@ -1187,11 +1182,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344945380}
   m_CullTransparentMesh: 1
---- !u!1 &1456202922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1489285582455594436, guid: dd2b07f3f8da79c4cafe21ec813c9a86, type: 3}
-  m_PrefabInstance: {fileID: 7019842744590801395}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1607396511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,8 +1901,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bd6e32c097e4f48a6e70a0f174e6f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   dialogueUI: {fileID: 2068358259}
   promptButton: {fileID: 1664978681}
+  activateFun: 
   girlTalk: 1
   dialogue1: {fileID: 624522467}
   dialogue2: {fileID: 763016933}
@@ -1931,6 +1923,11 @@ MonoBehaviour:
   dialogue15: {fileID: 0}
   dialogue16: {fileID: 0}
   dialogue17: {fileID: 0}
+  dialogue18: {fileID: 0}
+  dialogue19: {fileID: 0}
+  dialogue20: {fileID: 0}
+  dialogue21: {fileID: 0}
+  dialogue22: {fileID: 0}
   dialogueEnd: {fileID: 484130662}
   button1: {fileID: 957283420}
   button2: {fileID: 834669058}
@@ -1949,9 +1946,12 @@ MonoBehaviour:
   button15: {fileID: 0}
   button16: {fileID: 0}
   button17: {fileID: 0}
+  button18: {fileID: 0}
+  button19: {fileID: 0}
+  button20: {fileID: 0}
+  button21: {fileID: 0}
+  button22: {fileID: 0}
   buttonEnd: {fileID: 601418503}
-  girlImage: {fileID: 1456202922}
-  rangerImage: {fileID: 788443662}
 --- !u!61 &1816529761
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,13 +8,53 @@ TagManager:
   - Right
   - Death
   - Interactive
-  - Eye
-  - Core
-  - FroggyHat
-  - BoozeBottle
+  - Cat
+  - Airhorn
+  - Bird
+  - BloodyBat
   - BlueFlower
+  - BoozeBottle
+  - Cactus
+  - Chair
+  - Dress
+  - ExperimentVial
+  - FroggyHat
   - JJBullet
+  - Key
+  - Knife
+  - LavaRock
+  - Mabel
+  - Note
+  - Boots
+  - Hat
+  - Jacket
+  - Jeans
+  - Pillow
+  - Potion
+  - SheriffBadge
+  - SunflowerSeeds
+  - TreasureMap
+  - Wife
+  - Wig
+  - Bush
+  - ClinicDoor
+  - HouseDoor
+  - HutDoor
+  - OrphanDoor
+  - SaloonDownstairsDoor
+  - SaloonUpstairsDoor
+  - TownHallDoor
+  - CemeteryDoor
+  - MorganGrave
   - Quiet
+  - SaloonUpstairsExit
+  - Eye
+  - Miso
+  - Cookie
+  - Daniel
+  - Yoghurt
+  - Herbert
+  - Jenkins
   layers:
   - Default
   - TransparentFX
