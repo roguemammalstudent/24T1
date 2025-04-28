@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     //Variables for movement and jumping
     private float horizontal;
     public float speed = 5f;
-    public float jumpingPower = 16f;
+    public float jumpingPower = 5f;
 
     public GameObject beginningWall;
 
@@ -282,6 +282,8 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         // Move the Player horizontally based on input
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        //animator.Play("RangerWalk");
+
         // Player presses the jump button and is grounded = jump
           if (Input.GetButtonDown("Jump") && isGrounded())
           {

@@ -102088,6 +102088,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1451364630426848728, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 77d3905842597fc4f8f478488e468520, type: 2}
+    - target: {fileID: 2080281330370168135, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3663633724542538249, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: m_Name
       value: Player
@@ -102326,7 +102334,7 @@ PrefabInstance:
       objectReference: {fileID: 1135698590}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: groundLayer.m_Bits
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: wellInteractedText
@@ -102336,6 +102344,10 @@ PrefabInstance:
       propertyPath: bushInteractiveText
       value: 
       objectReference: {fileID: 277305521}
+    - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: hasCollectedTheBird
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: saloonBalconyCamera
       value: 
