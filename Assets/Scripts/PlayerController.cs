@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     //Variables for movement and jumping
     private float horizontal;
     public float speed = 5f;
-    public float jumpingPower = 16f;
+    public float jumpingPower = 5f;
 
     public GameObject beginningWall;
 
@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource AudioSource;
     public SoundManager soundManager;
+
+    private Animator animator;
 
     //Variable for flipping the Player sprite
     private bool isFacingRight = true;
@@ -280,11 +282,13 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         // Move the Player horizontally based on input
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        //animator.Play("RangerWalk");
+
         // Player presses the jump button and is grounded = jump
-        //  if (Input.GetButtonDown("Jump") && IsGrounded())
-        //  {
-        //      rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        //  }
+          if (Input.GetButtonDown("Jump") && isGrounded())
+          {
+              rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+          }
 
         // Player releases the jump button while still jumping = reduce jump height
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -934,11 +938,11 @@ public class PlayerController : MonoBehaviour
 
 
     //// Check if the player is on the ground
-    //private bool isGrounded()
-    //{
+    private bool isGrounded()
+    {
     //   // Use a Circle Cast to detect if there is ground beneath the Player
-    //   return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    //}
+       return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
 
     // Flip the player sprite if moving in the opposite direction
     private void Flip()
