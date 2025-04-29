@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,7 +38,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource AudioSource;
     public SoundManager soundManager;
 
-    private Animator animator;
+    private Animator anim;
+    private bool isIdle;
+    private bool isWalk;
 
     //Variable for flipping the Player sprite
     private bool isFacingRight = true;
@@ -217,6 +221,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
 
+        anim = GetComponent<Animator>();
+
+        isIdle = true;
+        isWalk = false;
+
         // Barnaby Well -- Big Sippy
         if (wellInteractiveText != null)
             wellInteractiveText.SetActive(false);
@@ -278,11 +287,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Get Horizontal input from the Player
-        horizontal = Input.GetAxisRaw("Horizontal");
-        // Move the Player horizontally based on input
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        //animator.Play("RangerWalk");
+        Movement();
+
+        Idle();
+
+        //if (anim != null && (isIdle = true))
+        //{
+        //    anim.Play("RangerIdle");
+        //}
+
+        //if ((isIdle = false) && (isWalk = true))
+        //{
+        //    anim.Play("RangerWalk");
+        //}
 
         // Player presses the jump button and is grounded = jump
           if (Input.GetButtonDown("Jump") && isGrounded())
@@ -942,6 +959,25 @@ public class PlayerController : MonoBehaviour
     {
     //   // Use a Circle Cast to detect if there is ground beneath the Player
        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Movement()
+    {
+        // Get Horizontal input from the Player
+        horizontal = Input.GetAxisRaw("Horizontal");
+        // Move the Player horizontally based on input
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        //isIdle = false;
+        //isWalk = true;
+        anim.Play("RangerWalk");
+    }
+
+    private void Idle()
+    {
+        if (isWalk)
+        {
+            anim.Play("RangerIdle");
+        }
     }
 
     // Flip the player sprite if moving in the opposite direction

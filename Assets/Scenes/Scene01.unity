@@ -102169,6 +102169,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1988966234}
     - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
+      propertyPath: jumpingPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215145340080390449, guid: ff70673ec9899ae4bbe0bcbf0364f201, type: 3}
       propertyPath: patientBadge
       value: 
       objectReference: {fileID: 1693413632}
